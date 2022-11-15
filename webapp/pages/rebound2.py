@@ -14,3 +14,4 @@ options = st.multiselect(
 #    planets(options) 
 #fig = rebound.OrbitPlot(sim)
 #st.pyplot(fig)
+st.write('You selected:', options)
