@@ -6,7 +6,7 @@ options = st.multiselect(
     ['Mercury', 'Venus', 'Earth', 'Mars'],
     ['Jupiter', 'Saturn', 'Uranus', 'Neptune'])
 
-def planets(choices)
+def planets(choices):
     match choices:
         case 'Mercury':
             sim.add("Mercury")
