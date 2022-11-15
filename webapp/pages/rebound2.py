@@ -6,8 +6,6 @@ options = st.multiselect(
     ['Mercury', 'Venus', 'Earth', 'Mars'],
     ['Jupiter', 'Saturn', 'Uranus', 'Neptune'])
 
-options
-
 def planets(choices)
     match choices:
         case 'Mercury':
