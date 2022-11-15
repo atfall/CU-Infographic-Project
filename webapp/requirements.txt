@@ -1,5 +1,2 @@
 streamlit
-PyQt5
-
-pygame
-pymunk
+rebound
