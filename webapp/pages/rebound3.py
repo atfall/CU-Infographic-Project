@@ -5,9 +5,8 @@ import pandas as pd
 
 sim = rebound.Simulation()
 
-options = st.selectbox(
-    'Add Planets',
-    ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter'))
+mercury = st.checkbox('Mercury')
+venus = st.checkbox('Venus')
 
 d = st.date_input(
     "Pick a date",
