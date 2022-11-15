@@ -12,7 +12,7 @@ options = st.multiselect(
 
 d = st.date_input(
     "When's your birthday",
-    pd.to_dateinput('today'))
+    st.to_dateinput('today'))
 
 sim.add("Sun")
 
