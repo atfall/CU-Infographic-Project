@@ -19,3 +19,17 @@ fig, ax = rebound.OrbitPlot(sim)
 
 fig_html = mpld3.fig_to_html(fig)
 components.html(fig_html, height=600)
+
+
+sim = rebound.Simulation()
+
+sim.add("Sun")
+sim.add("Mercury")
+sim.add("Venus")
+sim.add("Earth")
+sim.add("Mars")
+
+fig, ax = rebound.OrbitPlot(sim)
+
+fig_html = mpld3.fig_to_html(fig)
+components.html(fig_html, height=600)
