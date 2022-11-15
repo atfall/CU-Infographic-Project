@@ -1,6 +1,7 @@
 import rebound
 import streamlit as st
 import datetime
+import pandas as pd
 
 sim = rebound.Simulation()
 
@@ -11,7 +12,7 @@ options = st.multiselect(
 
 d = st.date_input(
     "When's your birthday",
-    datetime.date(2022-7-6))
+    pd.to_dateinput('today'))
 
 sim.add("Sun")
 
