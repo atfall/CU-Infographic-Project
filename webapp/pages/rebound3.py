@@ -7,7 +7,7 @@ sim = rebound.Simulation()
 
 options = st.selectbox(
     'Add Planets',
-    'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter')
+    ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter'))
 
 d = st.date_input(
     "Pick a date",
