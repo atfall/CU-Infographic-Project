@@ -6,16 +6,16 @@ options = st.multiselect(
     ['Mercury', 'Venus', 'Earth', 'Mars'],
     ['Jupiter', 'Saturn', 'Uranus', 'Neptune'])
 
-x = options
+options
 
-match x:
-    case 'Mercury':
-        sim.add("Mercury")
-    case 'Venus':
-        sim.add("Venus")
-    case 'Earth':
-        sim.add("Earth")
-    case _:
+def planets(choices)
+    match choices:
+        case 'Mercury':
+            sim.add("Mercury")
+        case 'Venus':
+            sim.add("Venus")
+        case 'Earth':
+            sim.add("Earth")
 
     
 fig = rebound.OrbitPlot(sim)
