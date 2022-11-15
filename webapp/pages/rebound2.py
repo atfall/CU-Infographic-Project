@@ -11,6 +11,6 @@ def planets(choices):
         sim.add("Mercury")
  
 
-def(options) 
+planets(options) 
 fig = rebound.OrbitPlot(sim)
 st.pyplot(fig)
