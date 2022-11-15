@@ -12,4 +12,4 @@ sim.add("Saturn")
 sim.add("Uranus")
 sim.add("Neptune")
 
-rebound.OrbitPlot(sim)
+st.pyplot(rebound.OrbitPlot(sim))
