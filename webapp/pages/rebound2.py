@@ -4,7 +4,7 @@ import streamlit as st
 options = st.multiselect(
     'What are your favorite colors',
     ['Mercury', 'Venus', 'Earth', 'Mars'])
-
+sim.add("Sun")
 if 'Mercury' in options:
     sim.add("Mercury")
 if 'Venus' in options:
