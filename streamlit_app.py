@@ -13,7 +13,6 @@ import random
 
 random.seed(5)  # Feel free to adjust, this is just to make each run equal
 
-import pygame
 
 import pymunk
 import pymunk.pygame_util
@@ -55,38 +54,3 @@ def add_box(space):
     box.elasticity = 0
     box.color = pygame.Color("white")
     space.add(body, box)
-
-
-pygame.init()
-screen = pygame.display.set_mode((600, 600))
-clock = pygame.time.Clock()
-
-space = pymunk.Space()
-draw_options = pymunk.pygame_util.DrawOptions(screen)
-
-for x in range(30):
-    add_box(space)
-
-while True:
-    for event in pygame.event.get():
-        if (
-            event.type == pygame.QUIT
-            or event.type == pygame.KEYDOWN
-            and event.key == pygame.K_ESCAPE
-        ):
-            exit()
-        elif event.type == pygame.KEYDOWN and event.key == pygame.K_p:
-            pygame.image.save(screen, "planet.png")
-
-    screen.fill(pygame.Color("black"))
-
-    space.debug_draw(draw_options)
-
-    # 'Star' in the center of screen
-    pygame.draw.circle(screen, pygame.Color("yellow"), (300, 300), 10)
-
-    space.step(1 / 60)
-
-    pygame.display.flip()
-    clock.tick(60)
-    pygame.display.set_caption("fps: " + str(clock.get_fps()))
