@@ -11,7 +11,7 @@ options = st.multiselect(
 
 d = st.date_input(
     "When's your birthday",
-    datetime.date(2022, 7, 6))
+    datetime.date(2022-7-6))
 
 sim.add("Sun")
 
