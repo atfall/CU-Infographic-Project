@@ -13,6 +13,7 @@ import random
 
 random.seed(5)  # Feel free to adjust, this is just to make each run equal
 
+import pygame
 
 import pymunk
 import pymunk.pygame_util
