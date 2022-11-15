@@ -14,6 +14,6 @@ if 'Mercury' in options:
 if 'Venus' in options:
     sim.add("Venus")
  
-fig = rebound.OrbitPlot(sim)
+fig, ax = rebound.OrbitPlot(sim)
 st.pyplot(fig)
 st.write('You selected:', options)
