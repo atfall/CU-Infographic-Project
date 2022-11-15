@@ -10,7 +10,7 @@ def planets(choices):
     if 'Mercury' in choices:
         sim.add("Mercury")
  
-
-planets(options) 
+if options not null:
+    planets(options) 
 fig = rebound.OrbitPlot(sim)
 st.pyplot(fig)
