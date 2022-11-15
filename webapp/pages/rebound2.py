@@ -14,6 +14,7 @@ def planets(choices):
             sim.add("Venus")
         case 'Earth':
             sim.add("Earth")
+        case _:
 
     
 fig = rebound.OrbitPlot(sim)
