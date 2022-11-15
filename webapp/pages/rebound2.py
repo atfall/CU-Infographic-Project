@@ -6,6 +6,8 @@ options = st.multiselect(
     ['Mercury', 'Venus', 'Earth', 'Mars'],
     ['Jupiter', 'Saturn', 'Uranus', 'Neptune'])
 
+x = options
+
 match options:
     case 'Mercury':
         sim.add("Mercury")
