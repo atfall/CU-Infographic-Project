@@ -8,16 +8,20 @@ options = st.multiselect(
     ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter'],
     ['Earth'])
 
+d = st.date_input(
+    "When's your birthday",
+    datetime.date(2019, 7, 6))
+
 sim.add("Sun")
 
 if 'Mercury' in options:
-    sim.add("Mercury")
+    sim.add("Mercury", date = d)
 if 'Venus' in options:
-    sim.add("Venus")
+    sim.add("Venus", date = d)
 if 'Earth' in options:
-    sim.add("Mars")
+    sim.add("Mars", date = d)
 if 'Jupiter' in options:
-    sim.add("Jupiter")
+    sim.add("Jupiter", date = d)
  
 fig, ax = rebound.OrbitPlot(sim)
 st.pyplot(fig)
