@@ -5,9 +5,9 @@ options = st.multiselect(
     'What are your favorite colors',
     ['Mercury', 'Venus', 'Earth', 'Mars'])
 
-if 'Mercury' in choices:
+if 'Mercury' in options:
     sim.add("Mercury")
-if 'Venus' in choices:
+if 'Venus' in options:
     sim.add("Venus")
  
 fig = rebound.OrbitPlot(sim)
