@@ -4,7 +4,7 @@ import numpy as np
 
 sim = rebound.Simulation()
 sim.add("Sun") #Star A
-sim.add("Sun)
+sim.add("Sun")
 sim.add("Earth")
 sim.move_to_com()
 fig = rebound.OrbitPlot(sim)
