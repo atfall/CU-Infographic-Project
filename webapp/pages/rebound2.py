@@ -11,7 +11,7 @@ options = st.multiselect(
 
 d = st.date_input(
     "When's your birthday",
-    datetime.date(2019, 7, 6))
+    datetime.date(2022, 7, 6))
 
 sim.add("Sun")
 
@@ -20,7 +20,7 @@ if 'Mercury' in options:
 if 'Venus' in options:
     sim.add("Venus", date = d)
 if 'Earth' in options:
-    sim.add("Mars", date = d)
+    sim.add("Mars", date = "2022-9-9")
 if 'Jupiter' in options:
     sim.add("Jupiter", date = d)
  
