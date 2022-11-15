@@ -14,9 +14,9 @@ d = st.date_input(
 d = str(d)
 sim.add("Sun")
 
-if 'Mercury' in options:
+if mercury:
     sim.add("Mercury", date = d)
-if 'Venus' in options:
+if venus:
     sim.add("Venus", date = d)
 if 'Earth' in options:
     sim.add("Earth", date = d)
