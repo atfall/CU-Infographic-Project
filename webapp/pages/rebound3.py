@@ -7,7 +7,7 @@ sim = rebound.Simulation()
 
 mercury = st.checkbox('Mercury')
 venus = st.checkbox('Venus')
-earth = st.checkbox('Earth')
+earth = st.checkbox('Earth', value = True)
 jupiter = st.checkbox('Jupiter')
 
 d = st.date_input(
@@ -27,5 +27,3 @@ if jupiter:
  
 fig, ax = rebound.OrbitPlot(sim)
 st.pyplot(fig)
-st.write('You selected:', options)
-st.write('You selected:', d)
