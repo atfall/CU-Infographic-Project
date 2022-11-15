@@ -16,7 +16,6 @@ sim.add("Uranus")
 sim.add("Neptune")
 
 fig, ax = rebound.OrbitPlot(sim)
-st.pyplot(fig)
 
 fig_html = mpld3.fig_to_html(fig)
 components.html(fig_html, height=600)
