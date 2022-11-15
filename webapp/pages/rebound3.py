@@ -5,7 +5,7 @@ import pandas as pd
 import mpld3
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
-%matplotlib notebook
+#%matplotlib notebook
 
 sim = rebound.Simulation()
 
@@ -42,7 +42,7 @@ if neptune:
     sim.add("Neptune", date = d)
  
 fig, ax = rebound.OrbitPlot(sim)
-st.pyplot(fig)
+#st.pyplot(fig)
 
 fig_html = mpld3.fig_to_html(fig)
 components.html(fig_html, height=600)
