@@ -4,6 +4,7 @@ import datetime
 import pandas as pd
 import mpld3
 import streamlit.components.v1 as components
+import matplotlib.pyplot as plt
 %matplotlib notebook
 
 sim = rebound.Simulation()
