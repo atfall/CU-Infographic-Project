@@ -8,7 +8,7 @@ options = st.multiselect(
 
 x = options
 
-match options:
+match x:
     case 'Mercury':
         sim.add("Mercury")
     case 'Venus':
