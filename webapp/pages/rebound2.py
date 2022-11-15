@@ -13,7 +13,7 @@ options = st.multiselect(
 d = st.date_input(
     "When's your birthday",
     value = pd.to_datetime('today'))
-
+print(d)
 sim.add("Sun")
 
 if 'Mercury' in options:
