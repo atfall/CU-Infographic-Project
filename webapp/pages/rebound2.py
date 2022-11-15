@@ -1,22 +1,20 @@
 import rebound
-from ipywidgets import HBox, VBox
-sim = rebound.Simulation()
-sim.getWidget()
+import streamlit as st
 
-sim.add(m=1) # add a star
+options = st.multiselect(
+    'What are your favorite colors',
+    ['Mercury', 'Venus', 'Earth', 'Mars'],
+    ['Jupiter', 'Saturn', 'Uranus', 'Neptune'])
 
-for i in range(10):
-    sim.add(m=1e-3,a=0.4+0.1*i,inc=0.03*i,omega=5.*i) # Jupiter mass planets on close orbits
-sim.move_to_com() # Move to the centre of mass frame
+match options:
+    case 'Mercury':
+        sim.add("Mercury")
+    case 'Venus':
+        sim.add("Venus")
+    case 'Earth':
+        sim.add("Earth")
+    case _:
 
-sim.integrate(500)
-
-sim.getWidget(size=(400,200),orbits=False)
-
-widget_1 = sim.getWidget(orientation=(0,0,0,1),scale=2)
-widget_2 = sim.getWidget(orientation=(0,1,0,1),scale=2,size=(50,200))
-widget_3 = sim.getWidget(orientation=(1,0,0,1),scale=2,size=(200,50))
-
-VBox((widget_3,HBox((widget_1, widget_2))))
-
-sim.integrate(800)
+    
+fig = rebound.OrbitPlot(sim)
+st.pyplot(fig)
