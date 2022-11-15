@@ -21,7 +21,7 @@ if 'Mercury' in options:
 if 'Venus' in options:
     sim.add("Venus", date = d)
 if 'Earth' in options:
-    sim.add("Mars", date = "2022-9-9")
+    sim.add("Earth", date = "2022-11-15")
 if 'Jupiter' in options:
     sim.add("Jupiter", date = d)
  
