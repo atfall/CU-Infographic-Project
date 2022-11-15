@@ -2,6 +2,7 @@ import rebound
 import streamlit as st
 import datetime
 import pandas as pd
+import mpld3
 
 sim = rebound.Simulation()
 
