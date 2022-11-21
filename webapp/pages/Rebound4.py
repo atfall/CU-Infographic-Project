@@ -44,5 +44,6 @@ if neptune:
  
 fig, ax = rebound.OrbitPlot(sim)
 #st.pyplot(fig)
-
-pe.plot(fig)
+df = pe.fig
+fig = pe.plot(df)
+fig.show()
