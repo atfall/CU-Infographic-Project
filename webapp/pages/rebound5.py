@@ -43,6 +43,7 @@ if neptune:
  
 fig, ax = rebound.OrbitPlot(sim)
 st.pyplot(fig)
+op = rebound.OrbitPlot(sim)
 fig = op.fig
 for i in range(100):
     op.sim.integrate(sim.t+0.6)
