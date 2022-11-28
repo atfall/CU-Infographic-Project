@@ -42,5 +42,5 @@ if uranus:
 if neptune:
     sim.add("Neptune", date = d)
  
-fig, ax = rebound.OrbitPlot(sim)
+op = rebound.OrbitPlot(sim)
 st.pyplot(fig)
