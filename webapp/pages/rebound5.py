@@ -79,5 +79,5 @@ for axes in op.ax:
         plugins.connect(op.fig, tooltip)
 
 fig_html = mpld3.fig_to_html(op.fig)
-components.html(fig_html, height=600)
+components.html(fig_html)
 
