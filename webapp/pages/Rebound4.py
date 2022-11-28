@@ -43,4 +43,4 @@ if neptune:
     sim.add("Neptune", date = d)
  
 op = rebound.OrbitPlot(sim)
-st.plotly_chart(op.fig)
+st.pyplot(op.fig)
