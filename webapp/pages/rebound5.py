@@ -49,4 +49,4 @@ for i in range(100):
     op.sim.integrate(sim.t+0.6)
     op.update()       # update data
     fig.canvas.draw() # redraw figure
-st.plotly_chart(fig)
+
