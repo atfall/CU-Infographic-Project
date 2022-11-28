@@ -42,6 +42,6 @@ if neptune:
     sim.add("Neptune", date = d)
  
 op = rebound.OrbitPlot(sim)
-fig_html = mpld3.fig_to_html(two_subplot_fig)
+fig_html = mpld3.fig_to_html(op.fig)
 components.html(fig_html, height=600)
 
