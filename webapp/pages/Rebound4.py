@@ -6,7 +6,7 @@ import mpld3
 import streamlit.components.v1 as components
 import plotly.express as pe
 import matplotlib.pyplot as plt
-#%matplotlib notebook
+#%matplotlib inline
 
 sim = rebound.Simulation()
 
