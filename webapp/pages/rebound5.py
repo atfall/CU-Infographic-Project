@@ -64,7 +64,7 @@ table, th, td
   text-align: right;
 }
 """
-for axes in two_subplot_fig.axes:
+for axes in op.ax:
     for line in axes.get_lines():
         # get the x and y coords
         xy_data = line.get_xydata()
