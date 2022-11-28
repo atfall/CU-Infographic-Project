@@ -6,4 +6,4 @@ ipywidgets
 datetime
 pandas
 plotly
-mpld3 == 0.3
+mpld3
