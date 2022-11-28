@@ -43,4 +43,4 @@ if neptune:
  
 fig, ax = rebound.OrbitPlot(sim)
 st.pyplot(fig)
-st.plotly_chart(fig)
+
