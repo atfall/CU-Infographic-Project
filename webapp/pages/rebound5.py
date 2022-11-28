@@ -44,5 +44,5 @@ if neptune:
 op = rebound.OrbitPlot(sim)
 
 fig_html = mpld3.fig_to_html(op.fig)
-components.html(fig_html)
+components.html(fig_html, height = 600)
 
