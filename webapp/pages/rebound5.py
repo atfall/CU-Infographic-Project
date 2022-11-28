@@ -76,7 +76,7 @@ for axes in two_subplot_fig.axes:
         # Create the tooltip with the labels (x and y coords) and attach it to each line with the css specified
         tooltip = plugins.PointHTMLTooltip(line, labels, css=css)
         # Since this is a separate plugin, you have to connect it
-        plugins.connect(two_subplot_fig, tooltip)
+        plugins.connect(op.fig, tooltip)
 
 fig_html = mpld3.fig_to_html(op.fig)
 components.html(fig_html, height=600)
