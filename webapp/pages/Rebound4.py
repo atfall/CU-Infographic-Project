@@ -5,6 +5,7 @@ import pandas as pd
 import mpld3
 import streamlit.components.v1 as components
 import plotly.express as pe
+import matplotlib.pyplot as plt
 #%matplotlib notebook
 
 sim = rebound.Simulation()
