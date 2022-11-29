@@ -8,9 +8,6 @@ import matplotlib.pyplot as plt
 
 sim_in = rebound.Simulation()
 sim_out = rebound.Simulation()
-sim_sb = rebound.Simulation()
-sim_sb_out = rebound.Simulation()
-sim_sun = rebound.Simulation()
 
 col1, col2= st.columns(2)
 with col1:
@@ -42,6 +39,8 @@ sim_out.add("Sun")
 
 is_body_type = []
 is_colour = []
+os_body_type = []
+os_colour = []
 
 if mercury:
     sim_in.add("Mercury", date = d)
