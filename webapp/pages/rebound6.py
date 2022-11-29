@@ -10,7 +10,6 @@ sim_in = rebound.Simulation()
 sim_out = rebound.Simulation()
 
 col1, col2= st.columns(2)
-
 with col1:
    st.header("Inner Solar System")
    st.write("Planets")
@@ -23,7 +22,6 @@ with col1:
    pallas = st.checkbox('Pallas')
    vesta = st.checkbox('Vesta')
                     
-   
 with col2:
    st.header("Outer Solar System")
    jupiter = st.checkbox('Jupiter')
@@ -39,6 +37,8 @@ d = str(d)
 sim_in.add("Sun")
 sim_out.add("Sun")
 
+small_bodies=[]
+
 if mercury:
     sim_in.add("Mercury", date = d)
 if venus:
@@ -48,11 +48,14 @@ if earth:
 if mars:
     sim_in.add("Mars", date = d)
 if ceres:
-   sim_in.add("Ceres", date = d)
+   sim_in.add("Ceres", hash = "Ceres", date = d)
+   small_bodies.append("Ceres")
 if pallas:
-   sim_in.add("Pallas", date = d)
+   sim_in.add("Pallas", hash = "Pallas", date = d)
+   small_bodies.append("Pallas")
 if vesta:
-   sim_in.add("Vesta", date = d)
+   sim_in.add("Vesta", hash = "Vesta", date = d)
+   small_bodies.append("Vesta")
     
 if jupiter:
     sim_out.add("Jupiter", date = d)
@@ -64,7 +67,9 @@ if neptune:
     sim_out.add("Neptune", date = d)
  
 op1 = rebound.OrbitPlot(sim_in)
-op1_2 = rebound.OrbitPlot(sim, particles=['Ceres'], ax=op1.ax, fig=op1.fig, lw=5, color="red")
+if small_bodies:
+  op1_2 = rebound.OrbitPlot(sim_in, particles=small_bodies, ax=op1.ax, fig=op1.fig, lw=0.5, color="green")
+
 op2 = rebound.OrbitPlot(sim_out)
 
 col_in, col_out= st.columns(2)
