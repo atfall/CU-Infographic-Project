@@ -18,8 +18,11 @@ with col1:
    venus = st.checkbox('Venus')
    earth = st.checkbox('Earth', value = True)
    mars = st.checkbox('Mars')
-   st.write("Dwarf Planets")
+   st.write("Small Bodies")
    ceres = st.checkbox('Ceres')
+   pallas = st.checkbox('Pallas')
+   vesta = st.checkbox('Vesta')
+                    
    
 with col2:
    st.header("Outer Solar System")
@@ -46,6 +49,10 @@ if mars:
     sim_in.add("Mars", date = d)
 if ceres:
    sim_in.add("Ceres", date = d)
+if pallas:
+   sim_in.add("Pallas", date = d)
+if vesta:
+   sim_in.add("Vesta", date = d)
     
 if jupiter:
     sim_out.add("Jupiter", date = d)
