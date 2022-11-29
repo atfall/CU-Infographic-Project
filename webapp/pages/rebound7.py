@@ -95,7 +95,7 @@ for i in range(len(is_body_type)):
     op1.orbits[i].set_linestyle("--")
     op1.particles.set_color(is_colour)
  
-op2 = rebound.OrbitPlot(sim_in)
+op2 = rebound.OrbitPlot(sim_out)
 for i in range(len(os_body_type)):
   if os_body_type[i] == "Dwarf":
     op2.orbits[i].set_linestyle("--")
