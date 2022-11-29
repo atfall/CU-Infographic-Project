@@ -98,8 +98,13 @@ for i in range(len(is_body_type)):
 op2 = rebound.OrbitPlot(sim_in)
 for i in range(len(os_body_type)):
   if os_body_type[i] == "Dwarf":
-    op1.orbits[i].set_linestyle("--")
-    op1.particles.set_color(os_colour)
+    op2.orbits[i].set_linestyle("--")
+    op2.particles.set_color(os_colour)
 
-st.pyplot(op1.fig)
-st.pyplot(op2.fig)
+col_in, col_out= st.columns(2)
+with col_in:
+   st.header("Inner Solar System")
+   st.pyplot(op1.fig)
+with col_out:
+   st.header("Outer Solar System")
+   st.pyplot(op2.fig)
