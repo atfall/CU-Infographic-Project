@@ -40,52 +40,67 @@ d = str(d)
 sim_in.add("Sun")
 sim_out.add("Sun")
 
-body_type = []
-colour = []
+is_body_type = []
+is_colour = []
 
 if mercury:
     sim_in.add("Mercury", date = d)
-    body_type.append("Planet")
-    colour.append("Red")
+    is_body_type.append("Planet")
+    is_colour.append("Red")
 if venus:
     sim_in.add("Venus", date = d)
-    body_type.append("Planet")
-    colour.append("Black")
+    is_body_type.append("Planet")
+    is_colour.append("Black")
 if earth:
     sim_in.add("Earth", hash = "Earth", date = d)
-    body_type.append("Planet")
-    colour.append("Black")
+    is_body_type.append("Planet")
+    is_colour.append("Black")
 if mars:
     sim_in.add("Mars", date = d)
-    body_type.append("Planet")
-    colour.append("Black")
+    is_body_type.append("Planet")
+    is_colour.append("Black")
 if ceres:
    sim_in.add("Ceres", hash = "Ceres", date = d)
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   is_body_type.append("Dwarf")
+   is_colour.append("Gray")
 if pallas:
    sim_in.add("Pallas", hash = "Pallas", date = d)
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   is_body_type.append("Dwarf")
+   is_colour.append("Gray")
 if vesta:
    sim_in.add("Vesta", hash = "Vesta", date = d)
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   is_body_type.append("Dwarf")
+   is_colour.append("Gray")
     
 if jupiter:
     sim_out.add("Jupiter", date = d)
+    os_body_type.append("Planet")
+    os_colour.append("Black")
 if saturn:
     sim_out.add("Saturn", date = d)
+    os_body_type.append("Planet")
+    os_colour.append("Black")
 if uranus:
     sim_out.add("Uranus", date = d)
+    os_body_type.append("Planet")
+    os_colour.append("Black")
 if neptune:
     sim_out.add("Neptune", date = d)
+    os_body_type.append("Planet")
+    os_colour.append("Black")
 
 #never integrate ever!
 op1 = rebound.OrbitPlot(sim_in)
-for i in range(len(body_type)):
-  if body_type[i] == "Dwarf":
+for i in range(len(is_body_type)):
+  if is_body_type[i] == "Dwarf":
     op1.orbits[i].set_linestyle("--")
-    op1.particles.set_color(colour)
+    op1.particles.set_color(is_colour)
+ 
+op2 = rebound.OrbitPlot(sim_in)
+for i in range(len(os_body_type)):
+  if os_body_type[i] == "Dwarf":
+    op1.orbits[i].set_linestyle("--")
+    op1.particles.set_color(os_colour)
 
 st.pyplot(op1.fig)
+st.pyplot(op2.fig)
