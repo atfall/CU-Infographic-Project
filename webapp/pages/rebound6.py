@@ -64,13 +64,15 @@ if neptune:
     sim_out.add("Neptune", date = d)
  
 op1 = rebound.OrbitPlot(sim_in)
-op1.orbits[1].set_linestyle("--")
+op1_1 = rebound.OrbitPlot(sim, particles=[1,3])
+op1_2 = rebound.OrbitPlot(sim, particles=[2], ax=op1.ax, fig=op1.fig, lw=5, color="red")
 op2 = rebound.OrbitPlot(sim_out)
 
 col_in, col_out= st.columns(2)
 with col_in:
    st.header("Inner Solar System")
-   st.pyplot(op1.fig)
+   st.pyplot(op1_2.fig)
+   st.pyplot(op1_1.fig)
 
 with col_out:
    st.header("Outer Solar System")
