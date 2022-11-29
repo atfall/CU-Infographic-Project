@@ -64,6 +64,7 @@ if neptune:
     sim_out.add("Neptune", date = d)
  
 op1 = rebound.OrbitPlot(sim_in)
+op1_2 = rebound.OrbitPlot(sim, particles=['Ceres'], ax=op1.ax, fig=op1.fig, lw=5, color="red")
 op2 = rebound.OrbitPlot(sim_out)
 
 col_in, col_out= st.columns(2)
