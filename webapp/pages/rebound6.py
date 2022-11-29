@@ -13,11 +13,14 @@ col1, col2= st.columns(2)
 
 with col1:
    st.header("Inner Solar System")
+   st.write("Planets")
    mercury = st.checkbox('Mercury')
    venus = st.checkbox('Venus')
    earth = st.checkbox('Earth', value = True)
    mars = st.checkbox('Mars')
-
+   st.write("Dwarf Planets")
+   ceres = st.checkbox('Ceres')
+   
 with col2:
    st.header("Outer Solar System")
    jupiter = st.checkbox('Jupiter')
@@ -41,6 +44,8 @@ if earth:
     sim_in.add("Earth", date = d)
 if mars:
     sim_in.add("Mars", date = d)
+if ceres:
+   sim_in.add("Ceres", date = d)
     
 if jupiter:
     sim_out.add("Jupiter", date = d)
