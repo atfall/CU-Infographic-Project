@@ -22,7 +22,9 @@ d = st.date_input(
     "Pick a date",
     value = pd.to_datetime('today'))
 d = str(d)
-sim.add("Sun")
+
+sim_in.add("Sun")
+sim_out.add("Sun")
 
 if mercury:
     sim_in.add("Mercury", date = d)
