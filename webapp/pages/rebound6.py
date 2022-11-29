@@ -6,7 +6,8 @@ import mpld3
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
 
-sim = rebound.Simulation()
+sim_in = rebound.Simulation()
+sim_out = rebound.Simulation()
 
 mercury = st.checkbox('Mercury')
 venus = st.checkbox('Venus')
@@ -24,21 +25,23 @@ d = str(d)
 sim.add("Sun")
 
 if mercury:
-    sim.add("Mercury", date = d)
+    sim_in.add("Mercury", date = d)
 if venus:
-    sim.add("Venus", date = d)
+    sim_in.add("Venus", date = d)
 if earth:
-    sim.add("Earth", date = d)
+    sim_in.add("Earth", date = d)
 if mars:
-    sim.add("Mars", date = d)
+    sim_in.add("Mars", date = d)
 if jupiter:
-    sim.add("Jupiter", date = d)
+    sim_out.add("Jupiter", date = d)
 if saturn:
-    sim.add("Saturn", date = d)
+    sim_out.add("Saturn", date = d)
 if uranus:
-    sim.add("Uranus", date = d)
+    sim_out.add("Uranus", date = d)
 if neptune:
-    sim.add("Neptune", date = d)
+    sim_out.add("Neptune", date = d)
  
-op = rebound.OrbitPlot(sim)
-st.pyplot(op.fig)
+op1 = rebound.OrbitPlot(sim_in)
+op2 = rebound.OrbitPlot(sim_out)
+st.pyplot(op1.fig)
+st.pyplot(op2.fig)
