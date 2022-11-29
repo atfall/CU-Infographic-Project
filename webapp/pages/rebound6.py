@@ -11,19 +11,19 @@ sim_out = rebound.Simulation()
 
 col1, col2= st.columns(2)
 
-with col_in:
+with col1:
    st.header("Inner Solar System")
    mercury = st.checkbox('Mercury')
-    venus = st.checkbox('Venus')
-    earth = st.checkbox('Earth', value = True)
-    mars = st.checkbox('Mars')
+   venus = st.checkbox('Venus')
+   earth = st.checkbox('Earth', value = True)
+   mars = st.checkbox('Mars')
 
-with col_out:
+with col2:
    st.header("Outer Solar System")
-    jupiter = st.checkbox('Jupiter')
-    saturn = st.checkbox('Saturn')
-    uranus = st.checkbox('Uranus')
-    neptune = st.checkbox('Neptune')
+   jupiter = st.checkbox('Jupiter')
+   saturn = st.checkbox('Saturn')
+   uranus = st.checkbox('Uranus')
+   neptune = st.checkbox('Neptune')
 
 d = st.date_input(
     "Pick a date",
