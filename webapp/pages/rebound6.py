@@ -64,7 +64,7 @@ if neptune:
     sim_out.add("Neptune", date = d)
  
 op1 = rebound.OrbitPlot(sim_in)
-op1.orbits.set_linestyle("--")
+op1.orbits[1].set_linestyle("--")
 op2 = rebound.OrbitPlot(sim_out)
 
 col_in, col_out= st.columns(2)
