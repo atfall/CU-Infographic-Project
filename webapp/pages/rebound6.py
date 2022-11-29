@@ -45,5 +45,13 @@ if neptune:
  
 op1 = rebound.OrbitPlot(sim_in)
 op2 = rebound.OrbitPlot(sim_out)
-st.pyplot(op1.fig)
-st.pyplot(op2.fig)
+
+col_in, col_out= st.columns(2)
+
+with col_in:
+   st.header("Inner Solar System")
+   st.pyplot(op1.fig)
+
+with col_out:
+   st.header("Outer Solar System")
+   st.pyplot(op2.fig)
