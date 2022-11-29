@@ -45,7 +45,6 @@ colour = []
 
 if mercury:
     sim_in.add("Mercury", date = d)
-    large_bodies.append("Mercury")
     body_type.append("Planet")
     colour.append("Red")
 if venus:
@@ -54,7 +53,6 @@ if venus:
     colour.append("Black")
 if earth:
     sim_in.add("Earth", hash = "Earth", date = d)
-    large_bodies.append("Earth")
     body_type.append("Planet")
     colour.append("Black")
 if mars:
@@ -63,19 +61,16 @@ if mars:
     colour.append("Black")
 if ceres:
    sim_in.add("Ceres", hash = "Ceres", date = d)
-   small_bodies.append("Ceres")
    body_type.append("Dwarf")
    colour.append("Gray")
 if pallas:
    sim_in.add("Pallas", hash = "Pallas", date = d)
-   small_bodies.append("Pallas")
    body_type.append("Dwarf")
    colour.append("Gray")
 if vesta:
    sim_in.add("Vesta", hash = "Vesta", date = d)
    body_type.append("Dwarf")
    colour.append("Gray")
-   small_bodies.append("Vesta")
     
 if jupiter:
     sim_out.add("Jupiter", date = d)
