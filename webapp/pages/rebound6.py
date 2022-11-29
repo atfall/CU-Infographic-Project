@@ -68,7 +68,7 @@ if neptune:
  
 op1 = rebound.OrbitPlot(sim_in)
 if small_bodies:
-  op1_2 = rebound.OrbitPlot(sim_in, particles=small_bodies, ax=op1.ax, fig=op1.fig, lw=0.5, color="white")
+  op1_2 = rebound.OrbitPlot(sim_in, particles=small_bodies, ax=op1.ax, fig=op1.fig, color="white")
 
 op2 = rebound.OrbitPlot(sim_out)
 
