@@ -33,6 +33,10 @@ with col2:
    pluto = st.checkbox('Pluto', value = True)
    haumea = st.checkbox('Haumea', value = True)
    quaoar = st.checkbox('Quaoar', value = True)
+   makemake = st.checkbox('Makemake', value = True)
+   gonggong = st.checkbox('Gonggong', value = True)
+   eris = st.checkbox('Eris', value = True)
+   sedna = st.checkbox('Sedna', value = True)
 
 d = st.date_input(
     "Pick a date",
@@ -106,6 +110,22 @@ if haumea:
    os_colour.append("Gray")
 if quaoar:
    sim_out.add("Quaoar", date = d)
+   os_body_type.append("Dwarf")
+   os_colour.append("Gray")
+if makemake:
+   sim_out.add("Makemake", date = d)
+   os_body_type.append("Dwarf")
+   os_colour.append("Gray")
+if gonggong:
+   sim_out.add("Gonggong", date = d)
+   os_body_type.append("Dwarf")
+   os_colour.append("Gray")
+if eris:
+   sim_out.add("Eris", date = d)
+   os_body_type.append("Dwarf")
+   os_colour.append("Gray")
+if sedna:
+   sim_out.add("Sedna", date = d)
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 
