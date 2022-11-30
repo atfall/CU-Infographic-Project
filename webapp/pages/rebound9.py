@@ -50,92 +50,98 @@ is_body_type = []
 is_colour = []
 os_body_type = []
 os_colour = []
+inner_bodies = []
+outer_bodies = []
 
 if mercury:
-    sim_in.add("Mercury", date = d)
+    inner_bodies.append("Mercury")
     is_body_type.append("Planet")
     is_colour.append("Red")
 if venus:
-    sim_in.add("Venus", date = d)
+    inner_bodies.append("Venus")
     is_body_type.append("Planet")
     is_colour.append("Black")
 if earth:
-    sim_in.add("Earth", hash = "Earth", date = d)
+    inner_bodies.append("Earth")
     is_body_type.append("Planet")
     is_colour.append("Black")
 if mars:
-    sim_in.add("Mars", date = d)
+    inner_bodies.append("Mars")
     is_body_type.append("Planet")
     is_colour.append("Black")
 if ceres:
-   sim_in.add("Ceres", hash = "Ceres", date = d)
+   inner_bodies.append("Ceres")
    is_body_type.append("Dwarf")
    is_colour.append("Gray")
 if pallas:
-   sim_in.add("Pallas", hash = "Pallas", date = d)
+   inner_bodies.append("Pallas")
    is_body_type.append("Dwarf")
    is_colour.append("Gray")
 if vesta:
-   sim_in.add("Vesta", hash = "Vesta", date = d)
+   inner_bodies.append("Vesta")
    is_body_type.append("Dwarf")
    is_colour.append("Gray")
     
 if jupiter:
-    sim_out.add("Jupiter", date = d)
+    outer_bodies.append("Jupiter")
     os_body_type.append("Planet")
     os_colour.append("Black")
 if saturn:
-    sim_out.add("Saturn", date = d)
+    outer_bodies.append("Saturn")
     os_body_type.append("Planet")
     os_colour.append("Black")
 if uranus:
-    sim_out.add("Uranus", date = d)
+    outer_bodies.append("Uranus")
     os_body_type.append("Planet")
     os_colour.append("Black")
 if neptune:
-    sim_out.add("Neptune", date = d)
+    outer_bodies.append("Neptune")
     os_body_type.append("Planet")
     os_colour.append("Black")
 if orcus:
-   sim_out.add("Orcus", date = d)
+   outer_bodies.append("Orcus")
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 if pluto:
-   sim_out.add("Pluto", date = d)
+   outer_bodies.append("Pluto")
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 if haumea:
-   sim_out.add("Haumea", date = d)
+   outer_bodies.append("Hauma")
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 if quaoar:
-   sim_out.add("Quaoar", date = d)
+   outer_bodies.append("Quaoar")
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 if makemake:
-   sim_out.add("Makemake", date = d)
+   outer_bodies.append("Makemake")
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 if gonggong:
-   sim_out.add("Gonggong", date = d)
+   outer_bodies.append("Gonggong")
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 if eris:
-   sim_out.add("Eris", date = d)
+   outer_bodies.append("Eris")
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 if sedna:
-   sim_out.add("Sedna", date = d)
+   outer_bodies.append("Sedna")
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 
 #never integrate ever!
+for i in range(len(inner_bodies)):
+   sim.add(inner_boddies[i], date = d)
 op1 = rebound.OrbitPlot(sim_in)
 for i in range(len(is_body_type)):
   if is_body_type[i] == "Dwarf":
     op1.orbits[i].set_linestyle("--")
     op1.particles.set_color(is_colour)
- 
+
+for i in range(len(outer_bodies)):
+   sim.add(outer_boddies[i], date = d)
 op2 = rebound.OrbitPlot(sim_out)
 for i in range(len(os_body_type)):
   if os_body_type[i] == "Dwarf":
