@@ -125,7 +125,8 @@ def checkboxes():
         out_colour.append("Gray")
 
         
-run_btn = st.button('Run', on_click=checkboxes())
+if st.button('Run'):
+    chechboxes()
 #never integrate ever!
 op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
 op1.particles.set_color(in_colour)
