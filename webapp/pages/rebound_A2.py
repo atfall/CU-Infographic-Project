@@ -5,6 +5,7 @@ import datetime
 import mpld3
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
+import plotly.plotly as py
 
 in_body_type = []
 in_colour = []
@@ -138,6 +139,7 @@ for i in range(len(out_body_type)):
   if out_body_type[i] == "Dwarf":
     op2.orbits[i].set_linestyle("--")
     
+unique_url = py.plot_mpl(op1.fig, filename="Inner")
 col_in, col_out= st.columns(2)
 with col_in:
    st.header("Inner Solar System")
