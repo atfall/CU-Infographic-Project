@@ -17,10 +17,6 @@ with col1:
    venus = st.checkbox('Venus')
    earth = st.checkbox('Earth', value = True)
    mars = st.checkbox('Mars')
-   st.write("Small Bodies")
-   ceres = st.checkbox('Ceres', value = True)
-   pallas = st.checkbox('Pallas', value = True)
-   vesta = st.checkbox('Vesta')
                     
 with col2:
    st.header("Outer Solar System")
@@ -28,15 +24,6 @@ with col2:
    saturn = st.checkbox('Saturn')
    uranus = st.checkbox('Uranus')
    neptune = st.checkbox('Neptune')
-   st.write("Small Bodies")
-   orcus = st.checkbox('Orcus', value = True)
-   pluto = st.checkbox('Pluto', value = True)
-   haumea = st.checkbox('Haumea', value = True)
-   quaoar = st.checkbox('Quaoar', value = True)
-   makemake = st.checkbox('Makemake', value = True)
-   gonggong = st.checkbox('Gonggong', value = True)
-   eris = st.checkbox('Eris', value = True)
-   sedna = st.checkbox('Sedna', value = True)
 
 d = st.date_input(
     "Pick a date",
@@ -69,18 +56,6 @@ if mars:
     inner_bodies.append("Mars")
     is_body_type.append("Planet")
     is_colour.append("Black")
-if ceres:
-   inner_bodies.append("Ceres")
-   is_body_type.append("Dwarf")
-   is_colour.append("Gray")
-if pallas:
-   inner_bodies.append("Pallas")
-   is_body_type.append("Dwarf")
-   is_colour.append("Gray")
-if vesta:
-   inner_bodies.append("Vesta")
-   is_body_type.append("Dwarf")
-   is_colour.append("Gray")
     
 if jupiter:
     outer_bodies.append("Jupiter")
@@ -98,38 +73,6 @@ if neptune:
     outer_bodies.append("Neptune")
     os_body_type.append("Planet")
     os_colour.append("Black")
-if orcus:
-   outer_bodies.append("Orcus")
-   os_body_type.append("Dwarf")
-   os_colour.append("Gray")
-if pluto:
-   outer_bodies.append("Pluto")
-   os_body_type.append("Dwarf")
-   os_colour.append("Gray")
-if haumea:
-   outer_bodies.append("Haumea")
-   os_body_type.append("Dwarf")
-   os_colour.append("Gray")
-if quaoar:
-   outer_bodies.append("Quaoar")
-   os_body_type.append("Dwarf")
-   os_colour.append("Gray")
-if makemake:
-   outer_bodies.append("Makemake")
-   os_body_type.append("Dwarf")
-   os_colour.append("Gray")
-if gonggong:
-   outer_bodies.append("Gonggong")
-   os_body_type.append("Dwarf")
-   os_colour.append("Gray")
-if eris:
-   outer_bodies.append("Eris")
-   os_body_type.append("Dwarf")
-   os_colour.append("Gray")
-if sedna:
-   outer_bodies.append("Sedna")
-   os_body_type.append("Dwarf")
-   os_colour.append("Gray")
 
 #never integrate ever!
 for i in range(len(inner_bodies)):
