@@ -124,6 +124,8 @@ def checkboxes():
         out_body_type.append("Dwarf")
         out_colour.append("Gray")
 
+        
+run_btn = st.button('Run', on_click=checkboxes())
 #never integrate ever!
 op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
 op1.particles.set_color(in_colour)
@@ -137,7 +139,7 @@ for i in range(len(out_body_type)):
   if out_body_type[i] == "Dwarf":
     op2.orbits[i].set_linestyle("--")
     
-run_btn = st.button('Run', on_click=checkboxes())
+
 
 col_in, col_out= st.columns(2)
 with col_in:
