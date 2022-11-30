@@ -37,54 +37,48 @@ is_body_type = []
 is_colour = []
 os_body_type = []
 os_colour = []
-inner_bodies = []
-outer_bodies = []
 
 if mercury:
-    inner_bodies.append("Mercury")
+    sim_in.add("Mercury", date = d)
     is_body_type.append("Planet")
     is_colour.append("Red")
 if venus:
-    inner_bodies.append("Venus")
+    sim_in.add("Venus", date = d)
     is_body_type.append("Planet")
     is_colour.append("Black")
 if earth:
-    inner_bodies.append("Earth")
+    sim_in.add("Earth", hash = "Earth", date = d)
     is_body_type.append("Planet")
     is_colour.append("Black")
 if mars:
-    inner_bodies.append("Mars")
+    sim_in.add("Mars", date = d)
     is_body_type.append("Planet")
     is_colour.append("Black")
     
 if jupiter:
-    outer_bodies.append("Jupiter")
+    sim_out.add("Jupiter", date = d)
     os_body_type.append("Planet")
     os_colour.append("Black")
 if saturn:
-    outer_bodies.append("Saturn")
+    sim_out.add("Saturn", date = d)
     os_body_type.append("Planet")
     os_colour.append("Black")
 if uranus:
-    outer_bodies.append("Uranus")
+    sim_out.add("Uranus", date = d)
     os_body_type.append("Planet")
     os_colour.append("Black")
 if neptune:
-    outer_bodies.append("Neptune")
+    sim_out.add("Neptune", date = d)
     os_body_type.append("Planet")
     os_colour.append("Black")
 
 #never integrate ever!
-for i in range(len(inner_bodies)):
-   sim_in.add(inner_bodies[i], date = d)
 op1 = rebound.OrbitPlot(sim_in)
 for i in range(len(is_body_type)):
   if is_body_type[i] == "Dwarf":
     op1.orbits[i].set_linestyle("--")
     op1.particles.set_color(is_colour)
 
-for i in range(len(outer_bodies)):
-   sim_out.add(outer_bodies[i], date = d)
 op2 = rebound.OrbitPlot(sim_out)
 for i in range(len(os_body_type)):
   if os_body_type[i] == "Dwarf":
