@@ -23,8 +23,9 @@ d = str(d)
 col1, col2, col3= st.columns(3)
 
 st.write("Planets")
-   planets = st.checkbox('Planets', value = True)
+planets = st.checkbox('Planets', value = True)
 
+st.write("Dwarf Planets")
 with col1:
    ceres = st.checkbox('Ceres', value = True)
    orcus = st.checkbox('Orcus', value = True)
