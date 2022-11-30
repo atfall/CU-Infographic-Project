@@ -2,8 +2,8 @@ import rebound
 import streamlit as st
 import pandas as pd
 import datetime
-#import mpld3
-#import streamlit.components.v1 as components
+import mpld3
+import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
 
 in_body_type = []
@@ -141,7 +141,8 @@ for i in range(len(out_body_type)):
 col_in, col_out= st.columns(2)
 with col_in:
    st.header("Inner Solar System")
-   st.pyplot(op1.fig)
+   fig_html = mpld3.fig_to_html(op1.fig)
+   components.html(fig_html, height = 600)
 with col_out:
    st.header("Outer Solar System")
    st.pyplot(op2.fig)
