@@ -106,7 +106,7 @@ if makemake:
    body_type.append("Dwarf")
    colour.append("Gray")
 if gonggong:
-   sim.add("Gonggong", hash = "Gonggong",, date = d)
+   sim.add("Gonggong", hash = "Gonggong", date = d)
    outer_bodies.append("Gonggong")
    body_type.append("Dwarf")
    colour.append("Gray")
