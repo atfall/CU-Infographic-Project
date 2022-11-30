@@ -34,105 +34,107 @@ d = str(d)
 
 sim.add("Sun")
 
-body_type = []
-colour = []
+in_body_type = []
+in_colour = []
+out_colour = []
+out_body_type = []
 inner_bodies = []
 outer_bodies = []
 
 if planets:
    sim.add("Mercury", hash = "Mercury", date = d)
    inner_bodies.append("Mercury")
-   body_type.append("Planet")
-   colour.append("Gray") 
+   in_body_type.append("Planet")
+   in_colour.append("Gray") 
    sim.add("Venus", hash = "Venus", date = d)
    inner_bodies.append("Venus")
-   body_type.append("Planet")
-   colour.append("Brown") 
+   in_body_type.append("Planet")
+   in_colour.append("Brown") 
    sim.add("Earth", hash = "Earth", date = d)
    inner_bodies.append("Earth")
-   body_type.append("Planet")
-   colour.append("Blue") 
+   in_body_type.append("Planet")
+   in_colour.append("Blue") 
    sim.add("Mars", hash = "Mars", date = d)
    inner_bodies.append("Mars")
-   body_type.append("Planet")
-   colour.append("Red") 
+   in_body_type.append("Planet")
+   in_colour.append("Red") 
    sim.add("Jupiter", hash = "Jupiter", date = d)
    outer_bodies.append("Jupiter")
-   body_type.append("Planet")
-   colour.append("Orange") 
+   out_body_type.append("Planet")
+   out_colour.append("Orange") 
    sim.add("Saturn", hash = "Saturn", date = d)
    outer_bodies.append("Saturn")
-   body_type.append("Planet")
-   colour.append("Gold") 
+   out_body_type.append("Planet")
+   out_colour.append("Gold") 
    sim.add("Uranus", hash = "Uranus", date = d)
    outer_bodies.append("Uranus")
-   body_type.append("Planet")
-   colour.append("Green") 
+   out_body_type.append("Planet")
+   out_colour.append("Green") 
    sim.add("Neptune", hash = "Neptune", date = d)
    outer_bodies.append("Neptune")
-   body_type.append("Planet")
-   colour.append("Blue") 
+   out_body_type.append("Planet")
+   out_colour.append("Blue") 
 
 if ceres:
    sim.add("Ceres", hash = "Ceres", date = d)
    inner_bodies.append("Ceres")
-   body_type.append("Dwarf")
-   colour.append("Gray")    
+   in_body_type.append("Dwarf")
+   in_colour.append("Gray")    
 
 if orcus:
    sim.add("Orcus", hash = "Orcus", date = d)
    outer_bodies.append("Orcus")
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   out_body_type.append("Dwarf")
+   out_colour.append("Gray")
 if pluto:
    sim.add("Pluto", hash = "Pluto", date = d)
    outer_bodies.append("Pluto")
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   out_body_type.append("Dwarf")
+   out_colour.append("Gray")
 if haumea:
    sim.add("Haumea", hash = "Haumea", date = d)
    outer_bodies.append("Haumea")
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   out_body_type.append("Dwarf")
+   out_colour.append("Gray")
 if quaoar:
    sim.add("Quaoar", hash = "Quaoar", date = d)
    outer_bodies.append("Quaoar")
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   out_body_type.append("Dwarf")
+   out_colour.append("Gray")
 if makemake:
    sim.add("Makemake", hash = "Makemake", date = d)
    outer_bodies.append("Makemake")
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   out_body_type.append("Dwarf")
+   out_colour.append("Gray")
 if gonggong:
    sim.add("Gonggong", hash = "Gonggong", date = d)
    outer_bodies.append("Gonggong")
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   out_body_type.append("Dwarf")
+   out_colour.append("Gray")
 if eris:
    sim.add("Eris", hash = "Eris", date = d)
    outer_bodies.append("Eris")
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   out_body_type.append("Dwarf")
+   out_colour.append("Gray")
 if sedna:
    sim.add("Sedna", hash = "Sedna", date = d)
    outer_bodies.append("Sedna")
-   body_type.append("Dwarf")
-   colour.append("Gray")
+   out_body_type.append("Dwarf")
+   out_colour.append("Gray")
 
 #never integrate ever!
 op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
-for i in range(len(body_type)):
-  if body_type[i] == "Dwarf":
+for i in range(len(in_body_type)):
+  if in_body_type[i] == "Dwarf":
     op1.orbits[i].set_linestyle("--")
-    op1.particles.set_color(colour)
+    op1.particles.set_color(in_colour)
 
 
 op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
-for i in range(len(body_type)):
-  if body_type[i] == "Dwarf":
+for i in range(len(out_body_type)):
+  if out_body_type[i] == "Dwarf":
     op2.orbits[i].set_linestyle("--")
-    op2.particles.set_color(colour)
+    op2.particles.set_color(out_colour)
 
 col_in, col_out= st.columns(2)
 with col_in:
