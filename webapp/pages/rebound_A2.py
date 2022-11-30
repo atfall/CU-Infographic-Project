@@ -139,11 +139,12 @@ for i in range(len(out_body_type)):
   if out_body_type[i] == "Dwarf":
     op2.orbits[i].set_linestyle("--")
     
-plotly_fig = tls.mpl_to_plotly(op1.fig)
+
 col_in, col_out= st.columns(2)
 with col_in:
    st.header("Inner Solar System")
-   st.plotly_chart(plotly_fig)
+   fig_html = mpld3.fig_to_html(op1.fig)
+components.html(fig_html, height = 600)
 with col_out:
    st.header("Outer Solar System")
    st.pyplot(op2.fig)
