@@ -133,7 +133,7 @@ if sedna:
 
 #never integrate ever!
 for i in range(len(inner_bodies)):
-   sim.add(inner_boddies[i], date = d)
+   sim_in.add(inner_boddies[i], date = d)
 op1 = rebound.OrbitPlot(sim_in)
 for i in range(len(is_body_type)):
   if is_body_type[i] == "Dwarf":
@@ -141,7 +141,7 @@ for i in range(len(is_body_type)):
     op1.particles.set_color(is_colour)
 
 for i in range(len(outer_bodies)):
-   sim.add(outer_boddies[i], date = d)
+   sim_out.add(outer_boddies[i], date = d)
 op2 = rebound.OrbitPlot(sim_out)
 for i in range(len(os_body_type)):
   if os_body_type[i] == "Dwarf":
