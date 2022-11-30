@@ -59,69 +59,70 @@ sim.add("Gonggong", hash = "Gonggong", date = d)
 sim.add("Eris", hash = "Eris", date = d)
 sim.add("Sedna", hash = "Sedna", date = d)
 
-if planets:
-   inner_bodies.append("Mercury")
-   in_body_type.append("Planet")
-   in_colour.append("Gray") 
-   inner_bodies.append("Venus")
-   in_body_type.append("Planet")
-   in_colour.append("Brown") 
-   inner_bodies.append("Earth")
-   in_body_type.append("Planet")
-   in_colour.append("Blue") 
-   inner_bodies.append("Mars")
-   in_body_type.append("Planet")
-   in_colour.append("Red") 
-   outer_bodies.append("Jupiter")
-   out_body_type.append("Planet")
-   out_colour.append("Orange") 
-   outer_bodies.append("Saturn")
-   out_body_type.append("Planet")
-   out_colour.append("Gold") 
-   outer_bodies.append("Uranus")
-   out_body_type.append("Planet")
-   out_colour.append("Green") 
-   outer_bodies.append("Neptune")
-   out_body_type.append("Planet")
-   out_colour.append("Blue") 
+def checkboxes():
+    if planets:
+        inner_bodies.append("Mercury")
+        in_body_type.append("Planet")
+        in_colour.append("Gray") 
+        inner_bodies.append("Venus")
+        in_body_type.append("Planet")
+        in_colour.append("Brown") 
+        inner_bodies.append("Earth")
+        in_body_type.append("Planet")
+        in_colour.append("Blue") 
+        inner_bodies.append("Mars")
+        in_body_type.append("Planet")
+        in_colour.append("Red") 
+        outer_bodies.append("Jupiter")
+        out_body_type.append("Planet")
+        out_colour.append("Orange") 
+        outer_bodies.append("Saturn")
+        out_body_type.append("Planet")
+        out_colour.append("Gold") 
+        outer_bodies.append("Uranus")
+        out_body_type.append("Planet")
+        out_colour.append("Green") 
+        outer_bodies.append("Neptune")
+        out_body_type.append("Planet")
+        out_colour.append("Blue") 
 
-if ceres:
-   inner_bodies.append("Ceres")
-   in_body_type.append("Dwarf")
-   in_colour.append("Gray")    
+    if ceres:
+        inner_bodies.append("Ceres")
+        in_body_type.append("Dwarf")
+        in_colour.append("Gray")    
 
-if orcus:
-   outer_bodies.append("Orcus")
-   out_body_type.append("Dwarf")
-   out_colour.append("Gray")
-if pluto:
-   outer_bodies.append("Pluto")
-   out_body_type.append("Dwarf")
-   out_colour.append("Gray")
-if haumea:
-   outer_bodies.append("Haumea")
-   out_body_type.append("Dwarf")
-   out_colour.append("Gray")
-if quaoar:
-   outer_bodies.append("Quaoar")
-   out_body_type.append("Dwarf")
-   out_colour.append("Gray")
-if makemake:
-   outer_bodies.append("Makemake")
-   out_body_type.append("Dwarf")
-   out_colour.append("Gray")
-if gonggong:
-   outer_bodies.append("Gonggong")
-   out_body_type.append("Dwarf")
-   out_colour.append("Gray")
-if eris:
-   outer_bodies.append("Eris")
-   out_body_type.append("Dwarf")
-   out_colour.append("Gray")
-if sedna:
-   outer_bodies.append("Sedna")
-   out_body_type.append("Dwarf")
-   out_colour.append("Gray")
+    if orcus:
+        outer_bodies.append("Orcus")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if pluto:
+        outer_bodies.append("Pluto")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if haumea:
+        outer_bodies.append("Haumea")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if quaoar:
+        outer_bodies.append("Quaoar")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if makemake:
+        outer_bodies.append("Makemake")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if gonggong:
+        outer_bodies.append("Gonggong")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if eris:
+        outer_bodies.append("Eris")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if sedna:
+        outer_bodies.append("Sedna")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
 
 #never integrate ever!
 op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
@@ -136,6 +137,7 @@ for i in range(len(out_body_type)):
   if out_body_type[i] == "Dwarf":
     op2.orbits[i].set_linestyle("--")
     
+run_btn = st.button('Run', on_click=checkboxes, key='c')
 
 col_in, col_out= st.columns(2)
 with col_in:
