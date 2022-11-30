@@ -128,8 +128,6 @@ op1.particles.set_color(in_colour)
 for i in range(len(in_body_type)):
   if in_body_type[i] == "Dwarf":
     op1.orbits[i].set_linestyle("--")
-    
-
 
 op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
 op2.particles.set_color(out_colour)
@@ -137,7 +135,6 @@ for i in range(len(out_body_type)):
   if out_body_type[i] == "Dwarf":
     op2.orbits[i].set_linestyle("--")
     
-
 col_in, col_out= st.columns(2)
 with col_in:
    st.header("Inner Solar System")
