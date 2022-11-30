@@ -143,7 +143,7 @@ plotly_fig = tls.mpl_to_plotly(op1.fig)
 col_in, col_out= st.columns(2)
 with col_in:
    st.header("Inner Solar System")
-   st.plotly_chart(plotly)
+   st.plotly_chart(plotly_fig)
 with col_out:
    st.header("Outer Solar System")
    st.pyplot(op2.fig)
