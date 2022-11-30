@@ -36,9 +36,6 @@ with col2:
    haumea = st.checkbox('Haumea', value = True)
    quaoar = st.checkbox('Quaoar', value = True)
    makemake = st.checkbox('Makemake', value = True)
-   gonggong = st.checkbox('Gonggong', value = True)
-   eris = st.checkbox('Eris', value = True)
-   sedna = st.checkbox('Sedna', value = True)
 
 with col3:
    gonggong = st.checkbox('Gonggong', value = True)
