@@ -6,20 +6,31 @@ import datetime
 #import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
 
+in_body_type = []
+in_colour = []
+out_colour = []
+out_body_type = []
+inner_bodies = []
+outer_bodies = []
+
 sim = rebound.Simulation()
 
+d = st.date_input(
+    "Pick a date",
+    value = pd.to_datetime('today'))
+d = str(d)
 
-col1, col2= st.columns(2)
-with col1:
-   st.header("Inner Solar System")
-   st.write("Planets")
+col1, col2, col3= st.columns(3)
+
+st.write("Planets")
    planets = st.checkbox('Planets', value = True)
-                    
-with col2:
-   st.write("Small Bodies")
+
+with col1:
    ceres = st.checkbox('Ceres', value = True)
    orcus = st.checkbox('Orcus', value = True)
    pluto = st.checkbox('Pluto', value = True)
+                    
+with col2:
    haumea = st.checkbox('Haumea', value = True)
    quaoar = st.checkbox('Quaoar', value = True)
    makemake = st.checkbox('Makemake', value = True)
@@ -27,19 +38,12 @@ with col2:
    eris = st.checkbox('Eris', value = True)
    sedna = st.checkbox('Sedna', value = True)
 
-d = st.date_input(
-    "Pick a date",
-    value = pd.to_datetime('today'))
-d = str(d)
-
+with col3:
+   gonggong = st.checkbox('Gonggong', value = True)
+   eris = st.checkbox('Eris', value = True)
+   sedna = st.checkbox('Sedna', value = True)
+   
 sim.add("Sun")
-
-in_body_type = []
-in_colour = []
-out_colour = []
-out_body_type = []
-inner_bodies = []
-outer_bodies = []
 
 if planets:
    sim.add("Mercury", hash = "Mercury", date = d)
