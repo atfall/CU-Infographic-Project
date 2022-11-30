@@ -30,6 +30,9 @@ with col2:
    neptune = st.checkbox('Neptune')
    st.write("Small Bodies")
    orcus = st.checkbox('Orcus', value = True)
+   pluto = st.checkbox('Pluto', value = True)
+   haumea = st.checkbox('Haumea', value = True)
+   quaoar = st.checkbox('Quaoar', value = True)
 
 d = st.date_input(
     "Pick a date",
@@ -91,6 +94,18 @@ if neptune:
     os_colour.append("Black")
 if orcus:
    sim_out.add("Orcus", date = d)
+   os_body_type.append("Dwarf")
+   os_colour.append("Gray")
+if pluto:
+   sim_out.add("Pluto", date = d)
+   os_body_type.append("Dwarf")
+   os_colour.append("Gray")
+if haumea:
+   sim_out.add("Haumea", date = d)
+   os_body_type.append("Dwarf")
+   os_colour.append("Gray")
+if quaoar:
+   sim_out.add("Quaoar", date = d)
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 
