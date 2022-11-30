@@ -28,6 +28,8 @@ with col2:
    saturn = st.checkbox('Saturn')
    uranus = st.checkbox('Uranus')
    neptune = st.checkbox('Neptune')
+   st.write("Small Bodies")
+   orcus = st.checkbox('Orcus', value = True)
 
 d = st.date_input(
     "Pick a date",
@@ -87,6 +89,10 @@ if neptune:
     sim_out.add("Neptune", date = d)
     os_body_type.append("Planet")
     os_colour.append("Black")
+if orcus:
+   sim_out.add("Orcus", date = d)
+   os_body_type.append("Dwarf")
+   os_colour.append("Gray")
 
 #never integrate ever!
 op1 = rebound.OrbitPlot(sim_in)
