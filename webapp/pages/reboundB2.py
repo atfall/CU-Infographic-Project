@@ -19,26 +19,6 @@ d = st.date_input(
     value = pd.to_datetime('today'))
 d = str(d)
 
-st.write("Planets")
-planets = st.checkbox('Planets', value = True)
-
-st.write("Dwarf Planets")
-col1, col2, col3= st.columns(3)
-with col1:
-   ceres = st.checkbox('Ceres', value = True)
-   orcus = st.checkbox('Orcus', value = True)
-   pluto = st.checkbox('Pluto', value = True)
-                    
-with col2:
-   haumea = st.checkbox('Haumea', value = True)
-   quaoar = st.checkbox('Quaoar', value = True)
-   makemake = st.checkbox('Makemake', value = True)
-
-with col3:
-   gonggong = st.checkbox('Gonggong', value = True)
-   eris = st.checkbox('Eris', value = True)
-   sedna = st.checkbox('Sedna', value = True)
-
 sim = rebound.Simulation()
 sim.add("Sun", date = d)
 sim.add("Mercury", hash = "Mercury", date = d)
@@ -58,6 +38,26 @@ sim.add("Makemake", hash = "Makemake", date = d)
 sim.add("Gonggong", hash = "Gonggong", date = d)
 sim.add("Eris", hash = "Eris", date = d)
 sim.add("Sedna", hash = "Sedna", date = d)
+
+st.write("Planets")
+planets = st.checkbox('Planets', value = True)
+
+st.write("Dwarf Planets")
+col1, col2, col3= st.columns(3)
+with col1:
+   ceres = st.checkbox('Ceres', value = True)
+   orcus = st.checkbox('Orcus', value = True)
+   pluto = st.checkbox('Pluto', value = True)
+                    
+with col2:
+   haumea = st.checkbox('Haumea', value = True)
+   quaoar = st.checkbox('Quaoar', value = True)
+   makemake = st.checkbox('Makemake', value = True)
+
+with col3:
+   gonggong = st.checkbox('Gonggong', value = True)
+   eris = st.checkbox('Eris', value = True)
+   sedna = st.checkbox('Sedna')
 
 def checkboxes():
     if planets:
