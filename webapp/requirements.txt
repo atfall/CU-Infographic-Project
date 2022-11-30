@@ -5,5 +5,5 @@ rebound
 ipywidgets
 datetime
 pandas
-plotly
+plotly.plotly
 mpld3
