@@ -14,14 +14,10 @@ out_body_type = []
 inner_bodies = []
 outer_bodies = []
 
-sim = rebound.Simulation()
-
 d = st.date_input(
     "Pick a date",
     value = pd.to_datetime('today'))
 d = str(d)
-
-
 
 st.write("Planets")
 planets = st.checkbox('Planets', value = True)
@@ -42,86 +38,87 @@ with col3:
    gonggong = st.checkbox('Gonggong', value = True)
    eris = st.checkbox('Eris', value = True)
    sedna = st.checkbox('Sedna', value = True)
-   
-sim.add("Sun")
+
+sim = rebound.Simulation()
+sim.add("Sun", date = d)
+sim.add("Mercury", hash = "Mercury", date = d)
+sim.add("Venus", hash = "Venus", date = d)
+sim.add("Earth", hash = "Earth", date = d)
+sim.add("Mars", hash = "Mars", date = d)
+sim.add("Jupiter", hash = "Jupiter", date = d)
+sim.add("Saturn", hash = "Saturn", date = d)
+sim.add("Uranus", hash = "Uranus", date = d)
+sim.add("Neptune", hash = "Neptune", date = d)
+sim.add("Ceres", hash = "Ceres", date = d)
+sim.add("Orcus", hash = "Orcus", date = d)
+sim.add("Pluto", hash = "Pluto", date = d)
+sim.add("Haumea", hash = "Haumea", date = d)
+sim.add("Quaoar", hash = "Quaoar", date = d)
+sim.add("Makemake", hash = "Makemake", date = d)
+sim.add("Gonggong", hash = "Gonggong", date = d)
+sim.add("Eris", hash = "Eris", date = d)
+sim.add("Sedna", hash = "Sedna", date = d)
 
 if planets:
-   sim.add("Mercury", hash = "Mercury", date = d)
    inner_bodies.append("Mercury")
    in_body_type.append("Planet")
    in_colour.append("Gray") 
-   sim.add("Venus", hash = "Venus", date = d)
    inner_bodies.append("Venus")
    in_body_type.append("Planet")
    in_colour.append("Brown") 
-   sim.add("Earth", hash = "Earth", date = d)
    inner_bodies.append("Earth")
    in_body_type.append("Planet")
    in_colour.append("Blue") 
-   sim.add("Mars", hash = "Mars", date = d)
    inner_bodies.append("Mars")
    in_body_type.append("Planet")
    in_colour.append("Red") 
-   sim.add("Jupiter", hash = "Jupiter", date = d)
    outer_bodies.append("Jupiter")
    out_body_type.append("Planet")
    out_colour.append("Orange") 
-   sim.add("Saturn", hash = "Saturn", date = d)
    outer_bodies.append("Saturn")
    out_body_type.append("Planet")
    out_colour.append("Gold") 
-   sim.add("Uranus", hash = "Uranus", date = d)
    outer_bodies.append("Uranus")
    out_body_type.append("Planet")
    out_colour.append("Green") 
-   sim.add("Neptune", hash = "Neptune", date = d)
    outer_bodies.append("Neptune")
    out_body_type.append("Planet")
    out_colour.append("Blue") 
 
 if ceres:
-   sim.add("Ceres", hash = "Ceres", date = d)
    inner_bodies.append("Ceres")
    in_body_type.append("Dwarf")
    in_colour.append("Gray")    
 
 if orcus:
-   sim.add("Orcus", hash = "Orcus", date = d)
    outer_bodies.append("Orcus")
    out_body_type.append("Dwarf")
    out_colour.append("Gray")
 if pluto:
-   sim.add("Pluto", hash = "Pluto", date = d)
    outer_bodies.append("Pluto")
    out_body_type.append("Dwarf")
    out_colour.append("Gray")
 if haumea:
-   sim.add("Haumea", hash = "Haumea", date = d)
    outer_bodies.append("Haumea")
    out_body_type.append("Dwarf")
    out_colour.append("Gray")
 if quaoar:
-   sim.add("Quaoar", hash = "Quaoar", date = d)
    outer_bodies.append("Quaoar")
    out_body_type.append("Dwarf")
    out_colour.append("Gray")
 if makemake:
-   sim.add("Makemake", hash = "Makemake", date = d)
    outer_bodies.append("Makemake")
    out_body_type.append("Dwarf")
    out_colour.append("Gray")
 if gonggong:
-   sim.add("Gonggong", hash = "Gonggong", date = d)
    outer_bodies.append("Gonggong")
    out_body_type.append("Dwarf")
    out_colour.append("Gray")
 if eris:
-   sim.add("Eris", hash = "Eris", date = d)
    outer_bodies.append("Eris")
    out_body_type.append("Dwarf")
    out_colour.append("Gray")
 if sedna:
-   sim.add("Sedna", hash = "Sedna", date = d)
    outer_bodies.append("Sedna")
    out_body_type.append("Dwarf")
    out_colour.append("Gray")
