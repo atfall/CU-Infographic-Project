@@ -107,7 +107,7 @@ if pluto:
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 if haumea:
-   outer_bodies.append("Hauma")
+   outer_bodies.append("Haumea")
    os_body_type.append("Dwarf")
    os_colour.append("Gray")
 if quaoar:
