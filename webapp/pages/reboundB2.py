@@ -124,28 +124,26 @@ def update():
         out_body_type.append("Dwarf")
         out_colour.append("Gray")
 
-        
-if st.button('Run'):
-    update()
-    #never integrate ever!
-    op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
-    op1.particles.set_color(in_colour)
-    for i in range(len(in_body_type)):
-        if in_body_type[i] == "Dwarf":
-            op1.orbits[i].set_linestyle("--")
 
-    op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
-    op2.particles.set_color(out_colour)
-    for i in range(len(out_body_type)):
-        if out_body_type[i] == "Dwarf":
-            op2.orbits[i].set_linestyle("--")
+    #never integrate ever!
+op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
+op1.particles.set_color(in_colour)
+for i in range(len(in_body_type)):
+    if in_body_type[i] == "Dwarf":
+        op1.orbits[i].set_linestyle("--")
+
+op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
+op2.particles.set_color(out_colour)
+for i in range(len(out_body_type)):
+    if out_body_type[i] == "Dwarf":
+        op2.orbits[i].set_linestyle("--")
     
 
 
-    col_in, col_out= st.columns(2)
-    with col_in:
-        st.header("Inner Solar System")
-        st.pyplot(op1.fig)
-    with col_out:
-        st.header("Outer Solar System")
-        st.pyplot(op2.fig)
+col_in, col_out= st.columns(2)
+with col_in:
+    st.header("Inner Solar System")
+    st.pyplot(op1.fig)
+with col_out:
+    st.header("Outer Solar System")
+    st.pyplot(op2.fig)
