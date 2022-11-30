@@ -42,7 +42,7 @@ os_colour = []
 inner_bodies = []
 outer_bodies = []
 
-if planet:
+if planets:
    sim_in.add("Mercury", date = d)
    sim_in.add("Venus", date = d)
    sim_in.add("Earth", date = d)
