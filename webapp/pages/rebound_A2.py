@@ -143,8 +143,7 @@ unique_url = py.plot_mpl(op1.fig, filename="Inner")
 col_in, col_out= st.columns(2)
 with col_in:
    st.header("Inner Solar System")
-   fig_html = mpld3.fig_to_html(op1.fig)
-   components.html(fig_html, height = 600)
+   st.plotly_chart(unique_url)
 with col_out:
    st.header("Outer Solar System")
    st.pyplot(op2.fig)
