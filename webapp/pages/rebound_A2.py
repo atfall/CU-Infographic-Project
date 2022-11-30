@@ -32,8 +32,7 @@ d = st.date_input(
     value = pd.to_datetime('today'))
 d = str(d)
 
-sim_in.add("Sun")
-sim_out.add("Sun")
+sim.add("Sun")
 
 body_type = []
 colour = []
