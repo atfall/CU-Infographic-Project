@@ -133,8 +133,7 @@ def step3():
     op2.update()
 animate = st.checkbox('Animate')
 while animate:
-    for i in range(10):
-        step1()
+    step2()
     
 
 
