@@ -156,6 +156,5 @@ while animate:
     sim.integrate(sim.t+0.31)
     op1.update()
     op2.update()
-	st.pyplot(op1.fig)
-	st.pyplot(op2.fig)
-    
+    st.pyplot(op1.fig)
+    st.pyplot(op2.fig)
