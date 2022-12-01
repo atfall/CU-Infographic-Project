@@ -157,6 +157,6 @@ with col_out:
 #step2 = st.button('step2', on_click = step2())	
 #step3 = st.button('step3', on_click = step3())	
 animate = st.checkbox('Animate')
-if animate:
-    step3()
+while animate:
     step1()
+    break
