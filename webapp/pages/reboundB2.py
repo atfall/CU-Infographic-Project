@@ -140,17 +140,19 @@ with col_out:
     st.header("Outer Solar System")
     st.pyplot(op2.fig)
 
-if st.button('Step'):
+
+def step1:
    sim.integrate(sim.t+0.6)
    op1.update()
    op2.update()
-
+def step2:
 if st.button('Step2'):
    sim.integrate(sim.t+1)
    op1.update()
    op2.update()
-
+def step3:
 if st.button('Step3'):
    sim.steps(1000)
    op1.update()
    op2.update()
+st.button('Step', on_click = step1)
