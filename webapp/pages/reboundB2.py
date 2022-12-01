@@ -142,7 +142,7 @@ with col_out:
 
 if st.button('Say hello'):
 	fig = op1.fig
-	for i in range(100):
-    		op1.sim.integrate(sim.t+0.6)
-    		op1.update()       # update data
-    		fig.canvas.draw()
+	for i in range(3):
+    		sim.integrate(sim.t+0.31)
+    		op1.update()
+   		op2.update()
