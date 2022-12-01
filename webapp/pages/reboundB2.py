@@ -151,6 +151,6 @@ if st.button('Step2'):
    op2.update()
 
 if st.button('Step3'):
-   sim.integrate(sim.t+10)
+   sim.steps(100)
    op1.update()
    op2.update()
