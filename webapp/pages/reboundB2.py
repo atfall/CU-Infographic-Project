@@ -147,7 +147,7 @@ if st.button('Say hello'):
         op1.update()
         op2.update()
 if st.checkbox('Say hello'):
-for i in range(3):
+    for i in range(3):
         sim.integrate(sim.t+0.31)
         op1.update()
         op2.update()
