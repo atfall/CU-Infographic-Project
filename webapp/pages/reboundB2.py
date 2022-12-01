@@ -158,5 +158,5 @@ step1 = st.button('step1', on_click = step1())
 #step3 = st.button('step3', on_click = step3())	
 animate = st.checkbox('Animate')
 if animate:
-	step1()
+    step1()
     animate = False
