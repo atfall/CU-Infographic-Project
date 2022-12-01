@@ -131,6 +131,10 @@ def step3():
     sim.steps(500)
     op1.update()
     op2.update()
+animate = st.checkbox('Animate')
+while animate:
+    step1()
+    break
 
 #plotting
 op1.particles.set_color(in_colour)
@@ -156,7 +160,3 @@ with col_out:
 #step1 = st.button('step1', on_click = step1())	
 #step2 = st.button('step2', on_click = step2())	
 #step3 = st.button('step3', on_click = step3())	
-animate = st.checkbox('Animate')
-while animate:
-    step1()
-    break
