@@ -159,3 +159,4 @@ with col_out:
 animate = st.checkbox('Animate')
 if animate:
     step1()
+    step1()
