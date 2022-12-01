@@ -41,6 +41,8 @@ def init_sim():
 	sim.add("Eris", hash = "Eris", date = d)
 	sim.add("Sedna", hash = "Sedna", date = d)
 
+init_sim()
+
 st.write("Planets")
 planets = st.checkbox('Planets', value = True)
 
