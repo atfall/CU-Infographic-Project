@@ -156,7 +156,7 @@ with col_out:
 
 step_btn_1 = st.button('Step')
 if step_btn_1:
-    step()
+    step1()
 step_btn_2 = st.button('Step2')
 if step_btn_2:
     step2()
