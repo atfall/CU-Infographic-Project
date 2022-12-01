@@ -142,6 +142,6 @@ with col_out:
 
 fig = op1.fig
 for i in range(100):
-    op.sim.integrate(sim.t+0.6)
-    op.update()       # update data
+    op1.sim.integrate(sim.t+0.6)
+    op1.update()       # update data
     fig.canvas.draw()
