@@ -121,7 +121,7 @@ op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
 op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
 #integrate/stepping
 def step1():
-    sim.steps(1)
+    sim.steps(5)
     op1.update()
     op2.update()
 def step2():
@@ -161,7 +161,7 @@ with col_in:
 with col_out:
     st.header("Outer Solar System")
     st.pyplot(op2.fig)
-animate = st.checkbox('Animate')
+animate = st.checkbox('Animate: !Experimental!')
 #step1 = st.button('step1', on_click = step1())	
 #step2 = st.button('step2', on_click = step2())	
 #step3 = st.button('step3', on_click = step3())	
