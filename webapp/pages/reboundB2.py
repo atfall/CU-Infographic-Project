@@ -40,7 +40,7 @@ def init_sim():
 	sim.add("Gonggong", hash = "Gonggong", date = d)
 	sim.add("Eris", hash = "Eris", date = d)
 	sim.add("Sedna", hash = "Sedna", date = d)
-    return sim
+	return sim
 
 sim = init_sim()
 
