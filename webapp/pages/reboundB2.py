@@ -66,7 +66,7 @@ with col3:
 
 if planets:
     in_planet_names = ["Mercury", "Venus", "Earth", "Mars"]
-    out_planet_names = ["Jupiter", "Satrun", "Uranus", "Neptune"]
+    out_planet_names = ["Jupiter", "Saturn", "Uranus", "Neptune"]
     type = ["Planet"]*4
     in_colours = ["Gray", "Brown", "Blue", "Red"]
     out_colours = ["Orange", "Gold", "Green", "Blue"]
