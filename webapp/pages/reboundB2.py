@@ -139,7 +139,7 @@ if step1:
 	step1()
 if step2:
 	step2()
-if step3
+if step3:
 	step3()
 
 #plotting
