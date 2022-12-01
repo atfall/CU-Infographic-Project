@@ -71,11 +71,11 @@ if planets:
     in_colours = ["Gray", "Brown", "Blue", "Red"]
     out_colours = ["Orange", "Gold", "Green", "Blue"]
     inner_bodies.extend(in_planet_names)
-    in_body_type.append(type)
-    in_colour.append(in_colours)
-    inner_bodies.append(out_planet_names)
-    in_body_type.append(type)
-    in_colour.append(out_colours)  
+    in_body_type.extend(type)
+    in_colour.extend(in_colours)
+    inner_bodies.extend(out_planet_names)
+    in_body_type.extend(type)
+    in_colour.extend(out_colours)  
     #inner_bodies.append("Mercury")
     #in_body_type.append("Planet")
     #in_colour.append("Gray") 
