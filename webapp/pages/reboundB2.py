@@ -140,8 +140,9 @@ with col_out:
     st.header("Outer Solar System")
     st.pyplot(op2.fig)
 
-fig = op1.fig
-for i in range(100):
-    op1.sim.integrate(sim.t+0.6)
-    op1.update()       # update data
-    fig.canvas.draw()
+if st.button('Say hello'):
+	fig = op1.fig
+	for i in range(100):
+    		op1.sim.integrate(sim.t+0.6)
+    		op1.update()       # update data
+    		fig.canvas.draw()
