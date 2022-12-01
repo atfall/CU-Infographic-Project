@@ -116,6 +116,19 @@ if sedna:
     out_body_type.append("Dwarf")
     out_colour.append("Gray")
 
+
+#plotting
+op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
+op1.particles.set_color(in_colour)
+for i in range(len(in_body_type)):
+    if in_body_type[i] == "Dwarf":
+        op1.orbits[i].set_linestyle("--")
+
+op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
+op2.particles.set_color(out_colour)
+for i in range(len(out_body_type)):
+    if out_body_type[i] == "Dwarf":
+        op2.orbits[i].set_linestyle("--")
 #integrate/stepping
 def step1():
     sim.steps(1)
@@ -145,19 +158,6 @@ if step_btn_3:
     sim.steps(1000)
     op1.update()
     op2.update()
-
-#plotting
-op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
-op1.particles.set_color(in_colour)
-for i in range(len(in_body_type)):
-    if in_body_type[i] == "Dwarf":
-        op1.orbits[i].set_linestyle("--")
-
-op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
-op2.particles.set_color(out_colour)
-for i in range(len(out_body_type)):
-    if out_body_type[i] == "Dwarf":
-        op2.orbits[i].set_linestyle("--")
 	
 #Display
 col_in, col_out= st.columns(2)
