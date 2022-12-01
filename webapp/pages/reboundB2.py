@@ -66,40 +66,17 @@ with col3:
 
 if planets:
     in_planet_names = ["Mercury", "Venus", "Earth", "Mars"]
-    out_planet_names = ["Jupiter", "Saturn", "Uranus", "Neptune"]
-    type = ["Planet"]*4
     in_colours = ["Gray", "Brown", "Blue", "Red"]
+    out_planet_names = ["Jupiter", "Saturn", "Uranus", "Neptune"]
     out_colours = ["Orange", "Gold", "Green", "Blue"]
+    type = ["Planet"]*4
+    
     inner_bodies.extend(in_planet_names)
     in_body_type.extend(type)
     in_colour.extend(in_colours)
     outer_bodies.extend(out_planet_names)
     out_body_type.extend(type)
     out_colour.extend(out_colours)  
-    #inner_bodies.append("Mercury")
-    #in_body_type.append("Planet")
-    #in_colour.append("Gray") 
-    #inner_bodies.append("Venus")
-    #in_body_type.append("Planet")
-    #in_colour.append("Brown") 
-    #inner_bodies.append("Earth")
-    #in_body_type.append("Planet")
-    #in_colour.append("Blue") 
-    #inner_bodies.append("Mars")
-    #in_body_type.append("Planet")
-    #in_colour.append("Red") 
-    #outer_bodies.append("Jupiter")
-    #out_body_type.append("Planet")
-    #out_colour.append("Orange") 
-    #outer_bodies.append("Saturn")
-    #out_body_type.append("Planet")
-    #out_colour.append("Gold") 
-    #outer_bodies.append("Uranus")
-    #out_body_type.append("Planet")
-    #out_colour.append("Green") 
-    #outer_bodies.append("Neptune")
-    #out_body_type.append("Planet")
-    #out_colour.append("Blue") 
 
 if ceres:
     inner_bodies.append("Ceres")
