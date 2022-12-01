@@ -153,10 +153,10 @@ def step3():
     op2.update()
 step_btn_1 = st.button('Step')
 if step_btn_1:
-    st.write('1')
     sim.steps(1)
     op1.update()
     op2.update()
+    st.write('1')
 step_btn_2 = st.button('Step2')
 if step_btn_2:
     sim.steps(100)
