@@ -72,7 +72,7 @@ if planets:
     out_colours = ["Orange", "Gold", "Green", "Blue"]
     inner_bodies.append(in_planet_names)
     in_body_type.append(type)
-    in_colour.append(colours)
+    in_colour.append(in_colours)
     inner_bodies.append(out_planet_names)
     in_body_type.append(type)
     in_colour.append(out_colours)  
