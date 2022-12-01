@@ -132,25 +132,26 @@ def step3():
     sim.steps(500)
     op1.update()
     op2.update()
-animate = st.checkbox('Animate', value = False)
-while animate:
-    step1()
-    plotting()
-    
-
+step1 = st.button('step1', on_click = step1())	
+step2 = st.button('step2', on_click = step2())	
+step3 = st.button('step3', on_click = step3())	
+if step1:
+	step1()
+if step2:
+	step2()
+if step3
+	step3()
 
 #plotting
-def plotting():
-    op1.particles.set_color(in_colour)
-    for i in range(len(in_body_type)):
-        if in_body_type[i] == "Dwarf":
-            op1.orbits[i].set_linestyle("--")
+op1.particles.set_color(in_colour)
+for i in range(len(in_body_type)):
+    if in_body_type[i] == "Dwarf":
+        op1.orbits[i].set_linestyle("--")
 
-    op2.particles.set_color(out_colour)
-    for i in range(len(out_body_type)):
-        if out_body_type[i] == "Dwarf":
-          op2.orbits[i].set_linestyle("--")
-plotting()  
+op2.particles.set_color(out_colour)
+for i in range(len(out_body_type)):
+    if out_body_type[i] == "Dwarf":
+      op2.orbits[i].set_linestyle("--")
 	
 #Display
 col_in, col_out= st.columns(2)
