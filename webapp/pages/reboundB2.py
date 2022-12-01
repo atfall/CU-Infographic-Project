@@ -129,7 +129,15 @@ def step3():
     sim.steps(500)
     op1.update()
     op2.update()
-
+step_btn_1 = st.button('Step')
+if step_btn_1:
+    step1()
+step_btn_2 = st.button('Step2')
+if step_btn_2:
+    step2()
+step_btn_3 = st.button('Step3')
+if step_btn_3:
+    step3()
 #plotting
 op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
 op1.particles.set_color(in_colour)
@@ -154,12 +162,4 @@ with col_out:
     st.pyplot(op2.fig)
 
 
-step_btn_1 = st.button('Step')
-if step_btn_1:
-    step1()
-step_btn_2 = st.button('Step2')
-if step_btn_2:
-    step2()
-step_btn_3 = st.button('Step3')
-if step_btn_3:
-    step3()
+
