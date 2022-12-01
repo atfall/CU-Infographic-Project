@@ -146,12 +146,10 @@ def step1():
    op1.update()
    op2.update()
 def step2():
-if st.button('Step2'):
    sim.integrate(sim.t+1)
    op1.update()
    op2.update()
 def step3():
-if st.button('Step3'):
    sim.steps(1000)
    op1.update()
    op2.update()
