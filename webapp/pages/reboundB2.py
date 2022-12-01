@@ -131,7 +131,7 @@ def step3():
     sim.steps(500)
     op1.update()
     op2.update()
-animate = st.checkbox('Animate')
+animate = st.checkbox('Animate', value = False)
 while animate:
     step2()
     plotting()
