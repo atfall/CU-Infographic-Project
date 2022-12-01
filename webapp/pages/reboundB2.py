@@ -65,12 +65,17 @@ with col3:
    sedna = st.checkbox('Sedna')
 
 if planets:
-    planet_names = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Satrun", "Uranus", "Neptune"]
-    type = ["Planet"]*8
-    colours = ["Gray", "Brown", "Blue", "Red", "Orange", "Gold", "Green", "Blue"]
-    inner_bodies.append(planet_names)
+    in_planet_names = ["Mercury", "Venus", "Earth", "Mars"]
+    out_planet_names = ["Jupiter", "Satrun", "Uranus", "Neptune"]
+    type = ["Planet"]*4
+    in_colours = ["Gray", "Brown", "Blue", "Red"]
+    out_colours = ["Orange", "Gold", "Green", "Blue"]
+    inner_bodies.append(in_planet_names)
     in_body_type.append(type)
-    in_colour.append(colours) 
+    in_colour.append(colours)
+    inner_bodies.append(out_planet_names)
+    in_body_type.append(type)
+    in_colour.append(out_colours)  
     #inner_bodies.append("Mercury")
     #in_body_type.append("Planet")
     #in_colour.append("Gray") 
