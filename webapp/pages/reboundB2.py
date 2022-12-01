@@ -141,7 +141,7 @@ with col_out:
     st.pyplot(op2.fig)
 
 if st.button('Step'):
-   sim.integrate(sim.t+0.31)
+   sim.integrate(sim.t+0.6)
    op1.update()
    op2.update()
 
