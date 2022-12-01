@@ -133,8 +133,10 @@ def step3():
     op2.update()
 animate = st.checkbox('Animate')
 while animate:
-    step1()
-    break
+    for i in range(10):
+        step1()
+    
+
 
 #plotting
 op1.particles.set_color(in_colour)
