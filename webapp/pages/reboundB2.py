@@ -140,15 +140,17 @@ with col_out:
 
 #integrate/stepping
 def step1():
-   
+    sim.steps(1)
+    op1.update()
+   	op2.update()
 def step2():
-   sim.steps(100)
-   op1.update()
-   op2.update()
+    sim.steps(100)
+    op1.update()
+    op2.update()
 def step3():
-   sim.steps(500)
-   op1.update()
-   op2.update()
+    sim.steps(500)
+    op1.update()
+    op2.update()
 step_btn_1 = st.button('Step')
 if step_btn_1:
 	sim.steps(1)
