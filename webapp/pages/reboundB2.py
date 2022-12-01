@@ -149,7 +149,7 @@ def plotting():
     for i in range(len(out_body_type)):
         if out_body_type[i] == "Dwarf":
           op2.orbits[i].set_linestyle("--")
- plotting()  
+plotting()  
 	
 #Display
 col_in, col_out= st.columns(2)
