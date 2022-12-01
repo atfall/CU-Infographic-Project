@@ -154,3 +154,5 @@ def step3():
    op1.update()
    op2.update()
 st.button('Step', on_click = step1())
+st.button('Step2', on_click = step2())
+st.button('Step3', on_click = step3())
