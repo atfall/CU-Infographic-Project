@@ -19,7 +19,7 @@ d = st.date_input(
     value = pd.to_datetime('today'))
 d = str(d)
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def init_sim():
 	sim = rebound.Simulation()
 	sim.add("Sun", date = d)
