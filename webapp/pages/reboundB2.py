@@ -148,15 +148,15 @@ def step2():
    op1.update()
    op2.update()
 def step3():
-   sim.steps(1000)
+   sim.steps(500)
    op1.update()
    op2.update()
-step = st.button('Step')
-if step:
+step_btn_1 = st.button('Step')
+if step_btn_1:
 	step1()
-step2 = st.button('Step2')
-if step2:
+step_btn_2 = st.button('Step2')
+if step_btn_2:
 	step2()
-step3 = st.button('Step3')
-if step3:
+step_btn_3 = st.button('Step3')
+if step_btn_3:
 	step3()
