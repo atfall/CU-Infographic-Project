@@ -152,8 +152,8 @@ while st.checkbox('Say hello'):
         op1.update()
         op2.update()
 animate = st.checkbox('Animate')
-while animate:
+if animate:
     sim.integrate(sim.t+0.31)
     op1.update()
     op2.update()
-    break
+    
