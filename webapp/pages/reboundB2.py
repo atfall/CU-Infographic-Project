@@ -130,16 +130,6 @@ for i in range(len(out_body_type)):
     if out_body_type[i] == "Dwarf":
         op2.orbits[i].set_linestyle("--")
 
-	
-#Display
-col_in, col_out= st.columns(2)
-with col_in:
-    st.header("Inner Solar System")
-    st.pyplot(op1.fig)
-with col_out:
-    st.header("Outer Solar System")
-    st.pyplot(op2.fig)
-
 #integrate/stepping
 def step1():
     sim.steps(1)
@@ -153,18 +143,23 @@ def step3():
     sim.steps(500)
     op1.update()
     op2.update()
+	
+#Display
+col_in, col_out= st.columns(2)
+with col_in:
+    st.header("Inner Solar System")
+    st.pyplot(op1.fig)
+with col_out:
+    st.header("Outer Solar System")
+    st.pyplot(op2.fig)
+
+
 step_btn_1 = st.button('Step')
 if step_btn_1:
-    sim.steps(10)
-    op1.update()
-    op2.update()
+    step()
 step_btn_2 = st.button('Step2')
 if step_btn_2:
-    sim.steps(100)
-    op1.update()
-    op2.update()
+    step2()
 step_btn_3 = st.button('Step3')
 if step_btn_3:
-    sim.steps(1000)
-    op1.update()
-    op2.update()
+    step3()
