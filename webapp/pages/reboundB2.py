@@ -151,3 +151,8 @@ while st.checkbox('Say hello'):
         sim.integrate(sim.t+0.31)
         op1.update()
         op2.update()
+animate = st.checkbox('Animate')
+while animate:
+    sim.integrate(sim.t+0.31)
+        op1.update()
+        op2.update()
