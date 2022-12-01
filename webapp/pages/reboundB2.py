@@ -154,3 +154,9 @@ def step3():
 step = st.button('Step')
 if step:
 	step1()
+step2 = st.button('Step2')
+if step2:
+	step2()
+step3 = st.button('Step3')
+if step3:
+	step3()
