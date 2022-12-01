@@ -141,18 +141,18 @@ with col_out:
     st.pyplot(op2.fig)
 
 
-def step1:
+def step1():
    sim.integrate(sim.t+0.6)
    op1.update()
    op2.update()
-def step2:
+def step2():
 if st.button('Step2'):
    sim.integrate(sim.t+1)
    op1.update()
    op2.update()
-def step3:
+def step3():
 if st.button('Step3'):
    sim.steps(1000)
    op1.update()
    op2.update()
-st.button('Step', on_click = step1)
+st.button('Step', on_click = step1())
