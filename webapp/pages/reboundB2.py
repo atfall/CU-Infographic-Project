@@ -156,3 +156,4 @@ while animate:
     sim.integrate(sim.t+0.31)
     op1.update()
     op2.update()
+    break
