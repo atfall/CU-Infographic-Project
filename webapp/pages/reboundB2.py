@@ -133,7 +133,7 @@ for i in range(len(out_body_type)):
 col_in, col_out= st.columns(2)
 with col_in:
     st.header("Inner Solar System")
-    st.pyplot(op1.fig)
+    st.pyplot(op1.fig, clear_figure = True)
 with col_out:
     st.header("Outer Solar System")
     st.pyplot(op2.fig)
