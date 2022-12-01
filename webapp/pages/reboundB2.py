@@ -146,3 +146,7 @@ if st.button('Say hello'):
         sim.integrate(sim.t+0.31)
         op1.update()
         op2.update()
+for i in range(3):
+        sim.integrate(sim.t+0.31)
+        op1.update()
+        op2.update()
