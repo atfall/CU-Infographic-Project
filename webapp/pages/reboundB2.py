@@ -140,19 +140,8 @@ with col_out:
     st.header("Outer Solar System")
     st.pyplot(op2.fig)
 
-if st.button('Say hello'):
-    fig = op1.fig
-    for i in range(3):
-        sim.integrate(sim.t+0.31)
-        op1.update()
-        op2.update()
-while st.checkbox('Say hello'):
-    for i in range(3):
-        sim.integrate(sim.t+0.31)
-        op1.update()
-        op2.update()
-animate = st.checkbox('Animate')
-while animate:
-    sim.integrate(sim.t+0.31)
-    op1.update()
-    op2.update()
+if st.button('Step'):
+   sim.integrate(sim.t+0.31)
+   op1.update()
+   op2.update()
+
