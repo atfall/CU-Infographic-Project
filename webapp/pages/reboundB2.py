@@ -131,22 +131,12 @@ def step3():
     sim.steps(500)
     op1.update()
     op2.update()
-step_btn_1 = st.button('Step')
-if step_btn_1:
-    step1()
-step_btn_2 = st.button('Step2')
-if step_btn_2:
-    step2()
-step_btn_3 = st.button('Step3')
-if step_btn_3:
-    step3()
-#plotting
 
+#plotting
 op1.particles.set_color(in_colour)
 for i in range(len(in_body_type)):
     if in_body_type[i] == "Dwarf":
         op1.orbits[i].set_linestyle("--")
-
 
 op2.particles.set_color(out_colour)
 for i in range(len(out_body_type)):
@@ -163,5 +153,13 @@ with col_out:
     st.header("Outer Solar System")
     st.pyplot(op2.fig)
 
-
+step_btn_1 = st.button('Step')
+if step_btn_1:
+    step1()
+step_btn_2 = st.button('Step2')
+if step_btn_2:
+    step2()
+step_btn_3 = st.button('Step3')
+if step_btn_3:
+    step3()
 
