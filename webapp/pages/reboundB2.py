@@ -157,6 +157,7 @@ if step_btn_1:
     op1.update()
     op2.update()
     st.write('1')
+	st.pyplot(op1.fig)
 step_btn_2 = st.button('Step2')
 if step_btn_2:
     sim.steps(100)
