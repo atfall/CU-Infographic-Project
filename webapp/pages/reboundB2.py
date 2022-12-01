@@ -153,14 +153,7 @@ with col_out:
     st.header("Outer Solar System")
     st.pyplot(op2.fig)
 
-st.button('click', on_click = step1())	
-step_btn_1 = st.button('Step')
-if step_btn_1:
-    step1()
-step_btn_2 = st.button('Step2')
-if step_btn_2:
-    step2()
-step_btn_3 = st.button('Step3')
-if step_btn_3:
-    step3()
+st.button('step1', on_click = step1())	
+st.button('step2', on_click = step2())	
+st.button('step3', on_click = step3())	
 
