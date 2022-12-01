@@ -134,20 +134,22 @@ def step3():
 animate = st.checkbox('Animate')
 while animate:
     step2()
+    plotting()
     
 
 
 #plotting
-op1.particles.set_color(in_colour)
-for i in range(len(in_body_type)):
-    if in_body_type[i] == "Dwarf":
-        op1.orbits[i].set_linestyle("--")
+def plotting():
+    op1.particles.set_color(in_colour)
+    for i in range(len(in_body_type)):
+        if in_body_type[i] == "Dwarf":
+            op1.orbits[i].set_linestyle("--")
 
-op2.particles.set_color(out_colour)
-for i in range(len(out_body_type)):
-    if out_body_type[i] == "Dwarf":
-        op2.orbits[i].set_linestyle("--")
-
+    op2.particles.set_color(out_colour)
+    for i in range(len(out_body_type)):
+        if out_body_type[i] == "Dwarf":
+          op2.orbits[i].set_linestyle("--")
+ plotting()  
 	
 #Display
 col_in, col_out= st.columns(2)
