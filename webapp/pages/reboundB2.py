@@ -132,14 +132,14 @@ def step3():
     sim.steps(500)
     op1.update()
     op2.update()
-step1 = st.button('step1', on_click = step1())	
-step2 = st.button('step2', on_click = step2())	
-step3 = st.button('step3', on_click = step3())	
-if step1:
+step_btn_1 = st.button('step1', on_click = step1())	
+step_btn_2 = st.button('step2', on_click = step2())	
+step_btn_3 = st.button('step3', on_click = step3())	
+if step_btn_1:
 	step1()
-if step2:
+if step_btn_2:
 	step2()
-if step3:
+if step_btn_3:
 	step3()
 
 #plotting
