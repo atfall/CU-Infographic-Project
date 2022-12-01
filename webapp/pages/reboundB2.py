@@ -134,7 +134,7 @@ def step3():
 animate = st.checkbox('Animate', value = False)
 while animate:
     step2()
-    plotting()
+    #plotting()
     
 
 
