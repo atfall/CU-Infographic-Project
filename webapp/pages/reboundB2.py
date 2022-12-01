@@ -116,6 +116,36 @@ if sedna:
     out_body_type.append("Dwarf")
     out_colour.append("Gray")
 
+#integrate/stepping
+def step1():
+    sim.steps(1)
+    op1.update()
+    op2.update()
+def step2():
+    sim.steps(100)
+    op1.update()
+    op2.update()
+def step3():
+    sim.steps(500)
+    op1.update()
+    op2.update()
+step_btn_1 = st.button('Step')
+if step_btn_1:
+    sim.steps(1)
+    op1.update()
+    op2.update()
+    st.write('1')
+step_btn_2 = st.button('Step2')
+if step_btn_2:
+    sim.steps(100)
+    op1.update()
+    op2.update()
+step_btn_3 = st.button('Step3')
+if step_btn_3:
+    sim.steps(1000)
+    op1.update()
+    op2.update()
+
 #plotting
 op1 = rebound.OrbitPlot(sim, particles = inner_bodies)
 op1.particles.set_color(in_colour)
@@ -138,33 +168,4 @@ with col_out:
     st.header("Outer Solar System")
     st.pyplot(op2.fig)
 
-#integrate/stepping
-def step1():
-    sim.steps(1)
-    op1.update()
-    op2.update()
-def step2():
-    sim.steps(100)
-    op1.update()
-    op2.update()
-def step3():
-    sim.steps(500)
-    op1.update()
-    op2.update()
-step_btn_1 = st.button('Step')
-if step_btn_1:
-    sim.steps(1)
-    op1.update()
-    op2.update()
-    st.write('1')
-    st.pyplot(op1.fig)
-step_btn_2 = st.button('Step2')
-if step_btn_2:
-    sim.steps(100)
-    op1.update()
-    op2.update()
-step_btn_3 = st.button('Step3')
-if step_btn_3:
-    sim.steps(1000)
-    op1.update()
-    op2.update()
+
