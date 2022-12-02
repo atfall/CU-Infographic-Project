@@ -98,7 +98,7 @@ def checkboxes():
         sedna = st.checkbox('Sedna')
 
 #add checked bodies to plot
-def add_bodies():
+
     if mercury:
         inner_bodies.append("Mercury")
         in_body_type.append("Planet")
@@ -232,6 +232,5 @@ def animate_graph():
 
 if __name__ == "__main__":
     checkboxes()
-    add_bodies()
     plotting()
     animate_graph()
