@@ -1,9 +1,5 @@
 streamlit
-numpy
 matplotlib
-rebound
-ipywidgets
-datetime
 pandas
-plotly
-mpld3
+numpy
+rebound
