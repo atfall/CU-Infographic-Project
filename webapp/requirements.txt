@@ -1,4 +1,5 @@
 streamlit
-rebound
+matplotlib
 pandas
 numpy
+rebound
