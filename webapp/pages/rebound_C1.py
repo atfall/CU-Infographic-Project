@@ -155,8 +155,8 @@ if sedna:
     out_colour.append("Gray")
     
 #create orbit plots
-op1 = rebound.OrbitPlot(sim, particles = inner_bodies) 
-op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
+op1 = rebound.OrbitPlot(sim, unitlabel="[AU]", particles = inner_bodies) 
+op2 = rebound.OrbitPlot(sim, unitlabel="[AU]", particles = outer_bodies)
 
 #integrate/stepping
 def step1():
