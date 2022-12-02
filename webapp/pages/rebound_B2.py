@@ -1,11 +1,6 @@
 import rebound
 import streamlit as st
 import pandas as pd
-import datetime
-import mpld3
-import streamlit.components.v1 as components
-import matplotlib.pyplot as plt
-import plotly.tools as tls
 
 
 d = st.date_input(
