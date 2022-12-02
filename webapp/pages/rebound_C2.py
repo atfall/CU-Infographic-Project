@@ -171,9 +171,9 @@ def checkboxes():
         out_body_type.append("Dwarf")
         out_colour.append("Gray")
   
-#create orbit plots
-op1 = rebound.OrbitPlot(sim, particles = inner_bodies) 
-op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
+    #create orbit plots
+    op1 = rebound.OrbitPlot(sim, particles = inner_bodies) 
+    op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
 
 #stepping buttons
 st.header('Time Step')
