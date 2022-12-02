@@ -96,19 +96,19 @@ if mars:
     in_colour.append("Black")
     
 if jupiter:
-    inner_bodies.append("Jupiter")
+    outer_bodies.append("Jupiter")
     out_body_type.append("Planet")
     out_colour.append("Black")
 if saturn:
-    inner_bodies.append("Saturn")
+    outer_bodies.append("Saturn")
     out_body_type.append("Planet")
     out_colour.append("Black")
 if uranus:
-    inner_bodies.append("Uranus")
+    outer_bodies.append("Uranus")
     out_body_type.append("Planet")
     out_colour.append("Black")
 if neptune:
-    inner_bodies.append("Neptune")
+    outer_bodies.append("Neptune")
     out_body_type.append("Planet")
     out_colour.append("Black")
 
