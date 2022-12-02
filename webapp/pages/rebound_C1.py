@@ -51,13 +51,13 @@ outer_bodies = []
 #checkboxes
 st.header("Planets")
 mercury = st.checkbox('Mercury', value = True)
-venus = st.checkbox('Venus')
+venus = st.checkbox('Venus', value = True)
 earth = st.checkbox('Earth', value = True)
-mars = st.checkbox('Mars')
+mars = st.checkbox('Mars', value = True)
 jupiter = st.checkbox('Jupiter', value = True)
-saturn = st.checkbox('Saturn')
-uranus = st.checkbox('Uranus')
-neptune = st.checkbox('Neptune')
+saturn = st.checkbox('Saturn', value = True)
+uranus = st.checkbox('Uranus', value = True)
+neptune = st.checkbox('Neptune', value = True)
 
 st.header("Dwarf Planets")
 col1, col2, col3 = st.columns(3)
@@ -81,36 +81,36 @@ with col3:
 if mercury:
     inner_bodies.append("Mercury")
     in_body_type.append("Planet")
-    in_colour.append("Red")
+    in_colour.append("Gray")
 if venus:
     inner_bodies.append("Venus")
     in_body_type.append("Planet")
-    in_colour.append("Black")
+    in_colour.append("Brown")
 if earth:
     inner_bodies.append("Earth")
     in_body_type.append("Planet")
-    in_colour.append("Black")
+    in_colour.append("Blue")
 if mars:
     inner_bodies.append("Mars")
     in_body_type.append("Planet")
-    in_colour.append("Black")
+    in_colour.append("Red")
     
 if jupiter:
     outer_bodies.append("Jupiter")
     out_body_type.append("Planet")
-    out_colour.append("Black")
+    out_colour.append("Orange")
 if saturn:
     outer_bodies.append("Saturn")
     out_body_type.append("Planet")
-    out_colour.append("Black")
+    out_colour.append("Gold")
 if uranus:
     outer_bodies.append("Uranus")
     out_body_type.append("Planet")
-    out_colour.append("Black")
+    out_colour.append("Green")
 if neptune:
     outer_bodies.append("Neptune")
     out_body_type.append("Planet")
-    out_colour.append("Black")
+    out_colour.append("Blue")
 
 if ceres:
     inner_bodies.append("Ceres")
