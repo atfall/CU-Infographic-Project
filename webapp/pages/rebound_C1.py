@@ -45,14 +45,23 @@ outer_bodies = []
 
 #checkboxes
 st.header("Planets")
-mercury = st.checkbox('Mercury', value = True)
-venus = st.checkbox('Venus', value = True)
-earth = st.checkbox('Earth', value = True)
-mars = st.checkbox('Mars', value = True)
-jupiter = st.checkbox('Jupiter', value = True)
-saturn = st.checkbox('Saturn', value = True)
-uranus = st.checkbox('Uranus', value = True)
-neptune = st.checkbox('Neptune', value = True)
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    mercury = st.checkbox('Mercury', value = True)
+    jupiter = st.checkbox('Jupiter', value = True)
+
+with col2:
+    venus = st.checkbox('Venus', value = True)
+    saturn = st.checkbox('Saturn', value = True)
+
+with col3:
+    earth = st.checkbox('Earth', value = True)
+    uranus = st.checkbox('Uranus', value = True)
+
+with col4:
+    mars = st.checkbox('Mars', value = True)
+    neptune = st.checkbox('Neptune', value = True)
 
 st.header("Dwarf Planets")
 col1, col2, col3 = st.columns(3)
