@@ -59,116 +59,118 @@ inner_bodies = []
 outer_bodies = []
 
 #checkboxes
-st.header("Planets")
-col1, col2, col3, col4 = st.columns(4)
+def checkboxes():
+    st.header("Planets")
+    col1, col2, col3, col4 = st.columns(4)
 
-with col1:
-    mercury = st.checkbox('Mercury', value = True)
-    jupiter = st.checkbox('Jupiter', value = True)
+    with col1:
+        mercury = st.checkbox('Mercury', value = True)
+        jupiter = st.checkbox('Jupiter', value = True)
 
-with col2:
-    venus = st.checkbox('Venus', value = True)
-    saturn = st.checkbox('Saturn', value = True)
+    with col2:
+        venus = st.checkbox('Venus', value = True)
+        saturn = st.checkbox('Saturn', value = True)
 
-with col3:
-    earth = st.checkbox('Earth', value = True)
-    uranus = st.checkbox('Uranus', value = True)
+    with col3:
+        earth = st.checkbox('Earth', value = True)
+        uranus = st.checkbox('Uranus', value = True)
 
-with col4:
-    mars = st.checkbox('Mars', value = True)
-    neptune = st.checkbox('Neptune', value = True)
+    with col4:
+        mars = st.checkbox('Mars', value = True)
+        neptune = st.checkbox('Neptune', value = True)
 
-st.header("Dwarf Planets")
-col1, col2, col3 = st.columns(3)
+    st.header("Dwarf Planets")
+    col1, col2, col3 = st.columns(3)
 
-with col1:
-    ceres = st.checkbox('Ceres', value = True)
-    haumea = st.checkbox('Haumea', value = True)
-    gonggong = st.checkbox('Gonggong', value = True)
-                 
-with col2:
-    orcus = st.checkbox('Orcus', value = True)
-    quaoar = st.checkbox('Quaoar', value = True)
-    eris = st.checkbox('Eris', value = True)
+    with col1:
+        ceres = st.checkbox('Ceres', value = True)
+        haumea = st.checkbox('Haumea', value = True)
+        gonggong = st.checkbox('Gonggong', value = True)
+                    
+    with col2:
+        orcus = st.checkbox('Orcus', value = True)
+        quaoar = st.checkbox('Quaoar', value = True)
+        eris = st.checkbox('Eris', value = True)
 
-with col3:
-    pluto = st.checkbox('Pluto', value = True)
-    makemake = st.checkbox('Makemake', value = True)
-    sedna = st.checkbox('Sedna')
+    with col3:
+        pluto = st.checkbox('Pluto', value = True)
+        makemake = st.checkbox('Makemake', value = True)
+        sedna = st.checkbox('Sedna')
 
 #add checked bodies to plot
-if mercury:
-    inner_bodies.append("Mercury")
-    in_body_type.append("Planet")
-    in_colour.append("Gray")
-if venus:
-    inner_bodies.append("Venus")
-    in_body_type.append("Planet")
-    in_colour.append("Brown")
-if earth:
-    inner_bodies.append("Earth")
-    in_body_type.append("Planet")
-    in_colour.append("Blue")
-if mars:
-    inner_bodies.append("Mars")
-    in_body_type.append("Planet")
-    in_colour.append("Red")
-    
-if jupiter:
-    outer_bodies.append("Jupiter")
-    out_body_type.append("Planet")
-    out_colour.append("Orange")
-if saturn:
-    outer_bodies.append("Saturn")
-    out_body_type.append("Planet")
-    out_colour.append("Gold")
-if uranus:
-    outer_bodies.append("Uranus")
-    out_body_type.append("Planet")
-    out_colour.append("Green")
-if neptune:
-    outer_bodies.append("Neptune")
-    out_body_type.append("Planet")
-    out_colour.append("Blue")
+def add_bodies():
+    if mercury:
+        inner_bodies.append("Mercury")
+        in_body_type.append("Planet")
+        in_colour.append("Gray")
+    if venus:
+        inner_bodies.append("Venus")
+        in_body_type.append("Planet")
+        in_colour.append("Brown")
+    if earth:
+        inner_bodies.append("Earth")
+        in_body_type.append("Planet")
+        in_colour.append("Blue")
+    if mars:
+        inner_bodies.append("Mars")
+        in_body_type.append("Planet")
+        in_colour.append("Red")
+        
+    if jupiter:
+        outer_bodies.append("Jupiter")
+        out_body_type.append("Planet")
+        out_colour.append("Orange")
+    if saturn:
+        outer_bodies.append("Saturn")
+        out_body_type.append("Planet")
+        out_colour.append("Gold")
+    if uranus:
+        outer_bodies.append("Uranus")
+        out_body_type.append("Planet")
+        out_colour.append("Green")
+    if neptune:
+        outer_bodies.append("Neptune")
+        out_body_type.append("Planet")
+        out_colour.append("Blue")
 
-if ceres:
-    inner_bodies.append("Ceres")
-    in_body_type.append("Dwarf")
-    in_colour.append("Gray")    
+    if ceres:
+        inner_bodies.append("Ceres")
+        in_body_type.append("Dwarf")
+        in_colour.append("Gray")    
 
-if orcus:
-    outer_bodies.append("Orcus")
-    out_body_type.append("Dwarf")
-    out_colour.append("Gray")
-if pluto:
-    outer_bodies.append("Pluto")
-    out_body_type.append("Dwarf")
-    out_colour.append("Gray")
-if haumea:
-    outer_bodies.append("Haumea")
-    out_body_type.append("Dwarf")
-    out_colour.append("Gray")
-if quaoar:
-    outer_bodies.append("Quaoar")
-    out_body_type.append("Dwarf")
-    out_colour.append("Gray")
-if makemake:
-    outer_bodies.append("Makemake")
-    out_body_type.append("Dwarf")
-    out_colour.append("Gray")
-if gonggong:
-    outer_bodies.append("Gonggong")
-    out_body_type.append("Dwarf")
-    out_colour.append("Gray")
-if eris:
-    outer_bodies.append("Eris")
-    out_body_type.append("Dwarf")
-    out_colour.append("Gray")
-if sedna:
-    outer_bodies.append("Sedna")
-    out_body_type.append("Dwarf")
-    out_colour.append("Gray")
-    
+    if orcus:
+        outer_bodies.append("Orcus")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if pluto:
+        outer_bodies.append("Pluto")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if haumea:
+        outer_bodies.append("Haumea")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if quaoar:
+        outer_bodies.append("Quaoar")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if makemake:
+        outer_bodies.append("Makemake")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if gonggong:
+        outer_bodies.append("Gonggong")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if eris:
+        outer_bodies.append("Eris")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+    if sedna:
+        outer_bodies.append("Sedna")
+        out_body_type.append("Dwarf")
+        out_colour.append("Gray")
+  
 #create orbit plots
 op1 = rebound.OrbitPlot(sim, particles = inner_bodies) 
 op2 = rebound.OrbitPlot(sim,  particles = outer_bodies)
@@ -196,32 +198,40 @@ if step_btn_3:
 	step3()
 
 #plotting
-op1.particles.set_color(in_colour)
-for i in range(len(in_body_type)):
-    if in_body_type[i] == "Dwarf":
-        op1.orbits[i].set_linestyle("--")
+def plotting():
+    op1.particles.set_color(in_colour)
+    for i in range(len(in_body_type)):
+        if in_body_type[i] == "Dwarf":
+            op1.orbits[i].set_linestyle("--")
 
-op2.particles.set_color(out_colour)
-for i in range(len(out_body_type)):
-    if out_body_type[i] == "Dwarf":
-      op2.orbits[i].set_linestyle("--")
+    op2.particles.set_color(out_colour)
+    for i in range(len(out_body_type)):
+        if out_body_type[i] == "Dwarf":
+            op2.orbits[i].set_linestyle("--")
 	
-#Display plots
-col_in, col_out = st.columns(2)
+    #Display plots
+    col_in, col_out = st.columns(2)
 
-with col_in:
-    st.header("Inner Solar System")
-    st.pyplot(op1.fig)
+    with col_in:
+        st.header("Inner Solar System")
+        st.pyplot(op1.fig)
 
-with col_out:
-    st.header("Outer Solar System")
-    st.pyplot(op2.fig)
+    with col_out:
+        st.header("Outer Solar System")
+        st.pyplot(op2.fig)
 
 #Experimental animate
-animate = st.checkbox('Animate: !Experimental!')
+def animate_graph():
+    animate = st.checkbox('Animate: !Experimental!')
 
-if animate:
-    step1()
+    if animate:
+        step1()
 
-if animate:
-    st.experimental_rerun()
+    if animate:
+        st.experimental_rerun()
+
+if __name__ == "__main__":
+    checkboxes()
+    add_bodies()
+    plotting()
+    animate_graph()
