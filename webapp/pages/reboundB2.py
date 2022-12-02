@@ -53,7 +53,7 @@ st.header("Planets")
 planets = st.checkbox('Planets', value = True)
 
 st.header("Dwarf Planets")
-col1, col2, col3= st.columns(3)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     ceres = st.checkbox('Ceres', value = True)
@@ -168,7 +168,7 @@ for i in range(len(out_body_type)):
       op2.orbits[i].set_linestyle("--")
 	
 #Display plots
-col_in, col_out= st.columns(2)
+col_in, col_out = st.columns(2)
 
 with col_in:
     st.header("Inner Solar System")
