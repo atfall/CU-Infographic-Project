@@ -51,13 +51,6 @@ def step3():
 
 sim = init_sim()
 
-in_body_type = []
-in_colour = []
-out_colour = []
-out_body_type = []
-inner_bodies = []
-outer_bodies = []
-
 #checkboxes
 def checkboxes():
     st.header("Planets")
@@ -231,6 +224,12 @@ def animate_graph():
         st.experimental_rerun()
 
 if __name__ == "__main__":
+    in_body_type = []
+    in_colour = []
+    out_colour = []
+    out_body_type = []
+    inner_bodies = []
+    outer_bodies = []
     checkboxes()
     plotting()
     animate_graph()
