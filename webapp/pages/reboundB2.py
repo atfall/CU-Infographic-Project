@@ -143,9 +143,17 @@ def step3():
     op2.update()
 
 #stepping buttons
-step_btn_1 = st.button('step1')	
-step_btn_2 = st.button('step2')	
-step_btn_3 = st.button('step3')	
+st.header('Time Step')
+col_1, col_2, col_3 = st.columns(3)
+
+with col_1:
+    step_btn_1 = st.button('step1')
+
+with col_2:	
+    step_btn_2 = st.button('step2')
+
+with col_3:	
+    step_btn_3 = st.button('step3')	
 
 if step_btn_1:
 	step1()
