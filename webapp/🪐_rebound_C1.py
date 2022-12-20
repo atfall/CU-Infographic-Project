@@ -45,7 +45,6 @@ out_colour = []
 out_body_type = []
 inner_bodies = []
 outer_bodies = []
-days = 0
 
 #checkboxes
 st.header("Planets")
@@ -203,6 +202,7 @@ if step_btn_2:
 if step_btn_3:
 	step3()
 
+days = 0
 st.write(f'Time Elapsed: {days} Days')
 st.write(f'Current Date: {date}')
 
