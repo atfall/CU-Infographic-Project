@@ -163,19 +163,22 @@ op1 = rebound.OrbitPlot(sim, unitlabel="[AU]", particles = inner_bodies)
 op2 = rebound.OrbitPlot(sim, unitlabel="[AU]", particles = outer_bodies)
 
 #integrate/stepping
-def step1(days):
+def step1():
+    global days
     sim.steps(5)
     days += 5
     op1.update()
     op2.update()
 
-def step2(days):
+def step2():
+    global days
     sim.steps(100)
     days += 100
     op1.update()
     op2.update()
 
-def step3(days):
+def step3():
+    global days
     sim.steps(500)
     days += 500
     op1.update()
@@ -196,13 +199,13 @@ with col_3:
 
 
 if step_btn_1:
-	step1(days)
+	step1()
 
 if step_btn_2:
-	step2(days)
+	step2()
 
 if step_btn_3:
-	step3(days)
+	step3()
 
 days = 0
 st.write(f'Time Elapsed: {days} Days')
@@ -234,7 +237,7 @@ with col_out:
 animate = st.checkbox('Animate: !Experimental!')
 
 if animate:
-    step1(days)
+    step1()
 
 if animate:
     st.experimental_rerun()
