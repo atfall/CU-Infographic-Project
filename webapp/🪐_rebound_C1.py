@@ -6,10 +6,10 @@ import pandas as pd
 st.title('Planets & Dwarf Planets')
 
 st.header('Start Date')
-d = st.date_input(
+date = st.date_input(
     "Pick a date",
     value = pd.to_datetime('today'))
-d = str(d)
+d = str(date)
 
 
 @st.cache(allow_output_mutation=True)
@@ -198,6 +198,8 @@ if step_btn_2:
 
 if step_btn_3:
 	step3()
+
+st.write(f'Current Date :{date}')
 
 #plotting
 op1.particles.set_color(in_colour)
