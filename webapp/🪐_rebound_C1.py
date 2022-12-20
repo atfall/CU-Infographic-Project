@@ -3,6 +3,9 @@ import streamlit as st
 import pandas as pd
 
 
+st.Title('Planets & Dwarf Planets')
+
+st.header('Start Date')
 d = st.date_input(
     "Pick a date",
     value = pd.to_datetime('today'))
