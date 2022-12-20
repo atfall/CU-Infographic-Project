@@ -193,6 +193,7 @@ with col_2:
 with col_3:	
     step_btn_3 = st.button('+500 Days')	
 
+days = 0
 if step_btn_1:
 	step1()
 
