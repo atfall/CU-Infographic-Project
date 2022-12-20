@@ -45,6 +45,7 @@ out_colour = []
 out_body_type = []
 inner_bodies = []
 outer_bodies = []
+days = 0
 
 #checkboxes
 st.header("Planets")
@@ -162,19 +163,19 @@ op1 = rebound.OrbitPlot(sim, unitlabel="[AU]", particles = inner_bodies)
 op2 = rebound.OrbitPlot(sim, unitlabel="[AU]", particles = outer_bodies)
 
 #integrate/stepping
-def step1():
+def step1(days):
     sim.steps(5)
     days += 5
     op1.update()
     op2.update()
 
-def step2():
+def step2(days):
     sim.steps(100)
     days += 100
     op1.update()
     op2.update()
 
-def step3():
+def step3(days):
     sim.steps(500)
     days += 500
     op1.update()
@@ -193,15 +194,15 @@ with col_2:
 with col_3:	
     step_btn_3 = st.button('+500 Days')	
 
-days = 0
+
 if step_btn_1:
-	step1()
+	step1(days)
 
 if step_btn_2:
-	step2()
+	step2(days)
 
 if step_btn_3:
-	step3()
+	step3(days)
 
 days = 0
 st.write(f'Time Elapsed: {days} Days')
@@ -233,7 +234,7 @@ with col_out:
 animate = st.checkbox('Animate: !Experimental!')
 
 if animate:
-    step1()
+    step1(days)
 
 if animate:
     st.experimental_rerun()
