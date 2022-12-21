@@ -169,16 +169,12 @@ def step1():
     op2.update()
 
 def step2():
-    global days
     sim.steps(100)
-    days += 100
     op1.update()
     op2.update()
 
 def step3():
-    global days
     sim.steps(500)
-    days += 500
     op1.update()
     op2.update()
     
