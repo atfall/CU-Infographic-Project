@@ -207,7 +207,6 @@ if step_btn_2:
 if step_btn_3:
 	step3()
 
-st.write(days)
 st.write(f'Time Elapsed: {st.session_state.count} Days')
 st.write(f'Current Date: {date}')
 
