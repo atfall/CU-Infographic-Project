@@ -194,7 +194,7 @@ with col_3:
 days = 0
 if step_btn_1:
     step1()
-    days += 5
+    days = days + 5
 
 if step_btn_2:
 	step2()
