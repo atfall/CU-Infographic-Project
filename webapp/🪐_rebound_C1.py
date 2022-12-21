@@ -169,6 +169,7 @@ def step1():
     days = days + 5
     op1.update()
     op2.update()
+    return days
 
 def step2():
     global days
@@ -183,7 +184,7 @@ def step3():
     days += 500
     op1.update()
     op2.update()
-    return days
+    
 
 #stepping buttons
 st.header('Time Step')
@@ -200,7 +201,8 @@ with col_3:
 
 
 if step_btn_1:
-	days += step1()
+    days_added = step1()
+    days += days_added
 
 if step_btn_2:
 	step2()
