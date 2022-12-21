@@ -45,7 +45,7 @@ out_colour = []
 out_body_type = []
 inner_bodies = []
 outer_bodies = []
-days = 0
+days = 2
 
 #checkboxes
 st.header("Planets")
