@@ -164,12 +164,9 @@ op2 = rebound.OrbitPlot(sim, unitlabel="[AU]", particles = outer_bodies)
 
 #integrate/stepping
 def step1():
-    global days
     sim.steps(5)
-    days = days + 5
     op1.update()
     op2.update()
-    return days
 
 def step2():
     global days
@@ -201,8 +198,8 @@ with col_3:
 
 
 if step_btn_1:
-    days_added = step1()
-    days += days_added
+    step1()
+    days += 5
 
 if step_btn_2:
 	step2()
