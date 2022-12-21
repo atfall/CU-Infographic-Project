@@ -45,7 +45,7 @@ out_colour = []
 out_body_type = []
 inner_bodies = []
 outer_bodies = []
-days = 2
+days = 0
 
 #checkboxes
 st.header("Planets")
@@ -183,6 +183,7 @@ def step3():
     days += 500
     op1.update()
     op2.update()
+    return days
 
 #stepping buttons
 st.header('Time Step')
@@ -199,7 +200,7 @@ with col_3:
 
 
 if step_btn_1:
-	step1()
+	days += step1()
 
 if step_btn_2:
 	step2()
