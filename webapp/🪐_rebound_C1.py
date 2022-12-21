@@ -209,7 +209,7 @@ if step_btn_3:
 
 st.write(f'Time Elapsed: {st.session_state.count} Days')
 current_date = date + pd.DateOffset(days=st.session_state.count)
-st.write(f'Current Date: {current_date}')
+st.write(f'Current Date: {current_date.dt.date}')
 
 #plotting
 op1.particles.set_color(in_colour)
