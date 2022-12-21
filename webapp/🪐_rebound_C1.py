@@ -45,7 +45,6 @@ out_colour = []
 out_body_type = []
 inner_bodies = []
 outer_bodies = []
-days = 0
 
 #checkboxes
 st.header("Planets")
@@ -192,7 +191,7 @@ with col_2:
 with col_3:	
     step_btn_3 = st.button('+500 Days')	
 
-
+days = 0
 if step_btn_1:
     step1()
     days += 5
