@@ -39,6 +39,9 @@ def init_sim():
 
 sim = init_sim()
 
+if 'count' not in st.session_state:
+	st.session_state.count = 0
+
 in_body_type = []
 in_colour = []
 out_colour = []
@@ -165,17 +168,19 @@ op2 = rebound.OrbitPlot(sim, unitlabel="[AU]", particles = outer_bodies)
 #integrate/stepping
 def step1():
     sim.steps(5)
-    days.append(5)
+    st.session_state.count += 5
     op1.update()
     op2.update()
 
 def step2():
     sim.steps(100)
+    st.session_state.count += 100
     op1.update()
     op2.update()
 
 def step3():
     sim.steps(500)
+    st.session_state.count += 500
     op1.update()
     op2.update()
     
@@ -203,7 +208,7 @@ if step_btn_3:
 	step3()
 
 st.write(days)
-st.write(f'Time Elapsed: {days[-1]} Days')
+st.write(f'Time Elapsed: {st.session_state.count} Days')
 st.write(f'Current Date: {date}')
 
 #plotting
