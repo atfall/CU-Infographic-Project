@@ -71,32 +71,36 @@ with col4:
     neptune = st.checkbox('Neptune', value = True)
 
 st.header("Dwarf Planets")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     ceres = st.checkbox('Ceres', value = True)
-    haumea = st.checkbox('Haumea', value = True)
 
-                 
 with col2:
-    eris = st.checkbox('Eris', value = True)
+    pluto = st.checkbox('Pluto', value = True)
 
 with col3:
-    pluto = st.checkbox('Pluto', value = True)
-    makemake = st.checkbox('Makemake', value = True)
+    haumea = st.checkbox('Haumea', value = True)
+
+with col4:
+    makemake = st.checkbox('Makemake', value = True)             
+
+with col5:
+    eris = st.checkbox('Eris', value = True)
+
 
 
 st.header('Candidate Dwarf Planets')
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    gonggong = st.checkbox('Gonggong')
+    orcus = st.checkbox('Orcus')
                  
 with col2:
-    orcus = st.checkbox('Orcus')
+    quaoar = st.checkbox('Quaoar')
 
 with col3:
-    quaoar = st.checkbox('Quaoar')
+    gonggong = st.checkbox('Gonggong')
 
 with col4:
     sedna = st.checkbox('Sedna')
