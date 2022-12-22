@@ -76,16 +76,31 @@ col1, col2, col3 = st.columns(3)
 with col1:
     ceres = st.checkbox('Ceres', value = True)
     haumea = st.checkbox('Haumea', value = True)
-    gonggong = st.checkbox('Gonggong', value = True)
+
                  
 with col2:
-    orcus = st.checkbox('Orcus', value = True)
-    quaoar = st.checkbox('Quaoar', value = True)
     eris = st.checkbox('Eris', value = True)
 
 with col3:
     pluto = st.checkbox('Pluto', value = True)
     makemake = st.checkbox('Makemake', value = True)
+
+
+st.header('Candidate Dwarf Planets')
+col1, col2, col3 = st.columns(3)
+
+with col1:
+
+    gonggong = st.checkbox('Gonggong', value = True)
+                 
+with col2:
+    orcus = st.checkbox('Orcus', value = True)
+    quaoar = st.checkbox('Quaoar', value = True)
+
+
+with col3:
+
+
     sedna = st.checkbox('Sedna')
 
 #add checked bodies to plot
