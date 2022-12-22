@@ -87,20 +87,18 @@ with col3:
 
 
 st.header('Candidate Dwarf Planets')
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-
-    gonggong = st.checkbox('Gonggong', value = True)
+    gonggong = st.checkbox('Gonggong')
                  
 with col2:
-    orcus = st.checkbox('Orcus', value = True)
-    quaoar = st.checkbox('Quaoar', value = True)
-
+    orcus = st.checkbox('Orcus')
 
 with col3:
+    quaoar = st.checkbox('Quaoar')
 
-
+with col4:
     sedna = st.checkbox('Sedna')
 
 #add checked bodies to plot
