@@ -209,7 +209,7 @@ if step_btn_3:
 
 st.write(f'Time Elapsed: {st.session_state.count} Days')
 current_date = date + pd.DateOffset(days=st.session_state.count)
-current_date = current_date.to_pydatetime().datetime.date
+current_date = current_date.to_pydatetime()
 st.write(f'Current Date: {current_date}')
 
 #plotting
