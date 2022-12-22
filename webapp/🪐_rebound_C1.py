@@ -235,10 +235,12 @@ with col_out:
     st.pyplot(op2.fig)
 
 #Experimental animate
-animate = st.checkbox('Animate: !Experimental!')
+animate = st.radio('Animate: !Experimental!', ('Off', 'Slow', 'Fast'))
 
-if animate:
+if animate == 'Slow':
     step1()
+elif animate == 'Fast':
+    step3()
 
-if animate:
+if animate != 'Off':
     st.experimental_rerun()
