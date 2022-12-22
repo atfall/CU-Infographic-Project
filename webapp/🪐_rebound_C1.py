@@ -143,7 +143,7 @@ if neptune:
 if ceres:
     inner_bodies.append("Ceres")
     in_body_type.append("Dwarf")
-    in_colour.append("Gray")    
+    in_colour.append("Black")    
 
 if orcus:
     outer_bodies.append("Orcus")
@@ -152,11 +152,11 @@ if orcus:
 if pluto:
     outer_bodies.append("Pluto")
     out_body_type.append("Dwarf")
-    out_colour.append("Gray")
+    out_colour.append("Black")
 if haumea:
     outer_bodies.append("Haumea")
     out_body_type.append("Dwarf")
-    out_colour.append("Gray")
+    out_colour.append("Black")
 if quaoar:
     outer_bodies.append("Quaoar")
     out_body_type.append("Dwarf")
@@ -164,7 +164,7 @@ if quaoar:
 if makemake:
     outer_bodies.append("Makemake")
     out_body_type.append("Dwarf")
-    out_colour.append("Gray")
+    out_colour.append("Black")
 if gonggong:
     outer_bodies.append("Gonggong")
     out_body_type.append("Dwarf")
@@ -172,7 +172,7 @@ if gonggong:
 if eris:
     outer_bodies.append("Eris")
     out_body_type.append("Dwarf")
-    out_colour.append("Gray")
+    out_colour.append("Black")
 if sedna:
     outer_bodies.append("Sedna")
     out_body_type.append("Dwarf")
