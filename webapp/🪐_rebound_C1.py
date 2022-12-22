@@ -240,7 +240,7 @@ animate = st.radio('Animate: !Experimental!', ('Off', 'Slow', 'Fast'))
 if animate == 'Slow':
     step1()
 elif animate == 'Fast':
-    step3()
+    step2()
 
 if animate != 'Off':
     st.experimental_rerun()
