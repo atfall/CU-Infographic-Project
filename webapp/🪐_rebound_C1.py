@@ -208,7 +208,7 @@ if step_btn_3:
 	step3()
 
 st.write(f'Time Elapsed: {st.session_state.count} Days')
-current_date = date + pd.timedelta(days=st.session_state.count)
+current_date = date + pd.Timedelta(days=st.session_state.count)
 #current_date = current_date.to_datetime()
 st.write(f'Current Date: {current_date}')
 
