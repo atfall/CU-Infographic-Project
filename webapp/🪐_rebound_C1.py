@@ -90,7 +90,7 @@ with col5:
 
 
 
-st.header('Candidate Dwarf Planets')
+st.header('Small Bodiess')
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
