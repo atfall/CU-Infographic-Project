@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 
-st.title('Planets & Dwarf Planets')
+st.title('Bodies in the Solar System')
 
 st.header('Start Date')
 date = st.date_input(
