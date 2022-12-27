@@ -261,3 +261,5 @@ elif animate == 'Fast':
 
 if animate != 'Off':
     st.experimental_rerun()
+
+st.write(sim.cite)
