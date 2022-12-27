@@ -38,6 +38,7 @@ def init_sim():
 
 
 sim = init_sim()
+sim.cite()
 
 if 'count' not in st.session_state:
 	st.session_state.count = 0
@@ -261,5 +262,3 @@ elif animate == 'Fast':
 
 if animate != 'Off':
     st.experimental_rerun()
-
-st.write(sim.cite)
