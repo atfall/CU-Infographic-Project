@@ -1,6 +1,6 @@
-streamlit
-matplotlib
-pandas
-numpy
-rebound
+streamlit == 1.16.0
+matplotlib == 3.6.2
+pandas == 1.5.2
+numpy == 1.24.1
+rebound == 3.23.0
 pretty_errors
